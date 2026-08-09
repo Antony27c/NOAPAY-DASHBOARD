@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nocturne-49063f70-b521-437d-9b6b-66d6d694a5d1/styles.css">
+<script src="_ds/nocturne-49063f70-b521-437d-9b6b-66d6d694a5d1/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+  body { margin: 0; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); }
+  a { color: var(--color-accent-300); text-decoration: none; }
+  a:hover { color: var(--color-accent-200); }
+  input::placeholder { color: var(--color-neutral-600); }
+  select { appearance: none; }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+</style>
+</helmet>
+
+<div style="display: grid; grid-template-columns: 236px 1fr; min-height: 100vh; background: var(--color-bg); color: var(--color-text); font-family: var(--font-body); font-size: 13px;">
+
+  <aside style="display: flex; flex-direction: column; gap: 22.4px; padding: 22.4px 16.8px; border-right: 1px solid var(--color-neutral-900); background: linear-gradient(180deg, #1a1c2b 0%, var(--color-bg) 55%);">
+    <div style="display: flex; align-items: center; gap: 8.4px; padding: 0 5.6px;">
+      <div style="display: flex; flex-direction: column; gap: 2.8px;">
+        <div style="display: flex; align-items: center; font-family: var(--font-heading); font-weight: 600; letter-spacing: 0.09em; font-size: 15px; line-height: 1;">
+          <span>N</span>
+          <img src="assets/novapay-light.png" alt="O" style="width: 19px; height: 19px; margin: 0 0.04em; display: block;">
+          <span>APAY</span>
+        </div>
+        <span style="font-size: 10.5px; color: var(--color-neutral-600);">Consola</span>
+      </div>
+    </div>
+
+    <nav style="display: flex; flex-direction: column; gap: 2.8px;">
+      <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-neutral-600); padding: 0 5.6px 5.6px;">Cuenta</span>
+      <sc-for list="{{ nav }}" as="item" hint-placeholder-count="4">
+        <button onClick="{{ item.select }}" style="{{ item.style }}">
+          <i class="{{ item.icon }}" style="font-size: 16px;"></i>{{ item.label }}
+        </button>
+      </sc-for>
+
+      <span style="font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--color-neutral-600); padding: 16.8px 5.6px 5.6px;">Desarrollo</span>
+      <a href="#" style="display: flex; align-items: center; gap: 8.4px; padding: 8.4px; border-radius: 8px; color: var(--color-neutral-400); font-size: 12.5px;" style-hover="background: var(--color-neutral-900); color: var(--color-neutral-200);">
+        <i class="ph ph-key" style="font-size: 16px;"></i>Claves API
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 8.4px; padding: 8.4px; border-radius: 8px; color: var(--color-neutral-400); font-size: 12.5px;" style-hover="background: var(--color-neutral-900); color: var(--color-neutral-200);">
+        <i class="ph ph-webhooks-logo" style="font-size: 16px;"></i>Webhooks
+      </a>
+      <a href="#" style="display: flex; align-items: center; gap: 8.4px; padding: 8.4px; border-radius: 8px; color: var(--color-neutral-400); font-size: 12.5px;" style-hover="background: var(--color-neutral-900); color: var(--color-neutral-200);">
+        <i class="ph ph-book-open" style="font-size: 16px;"></i>Documentación
+      </a>
+    </nav>
+
+    <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8.4px;">
+      <div style="padding: 11.2px; border-radius: 8px; border: 1px solid var(--color-neutral-900); display: flex; flex-direction: column; gap: 5.6px;">
+        <span style="font-size: 10.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-600);">Entorno</span>
+        <div style="display: flex; gap: 2.8px; padding: 2.8px; border-radius: 8px; background: var(--color-neutral-900);">
+          <button onClick="{{ setSandbox }}" style="{{ sandboxStyle }}">Sandbox</button>
+          <button onClick="{{ setProd }}" style="{{ prodStyle }}">Producción</button>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 8.4px; padding: 8.4px; border-radius: 8px; border: 1px solid var(--color-neutral-900);">
+        <div style="width: 28px; height: 28px; border-radius: 999px; background: var(--color-accent-800); color: var(--color-accent-200); display: grid; place-items: center; font-size: 11px; font-weight: 600;">MR</div>
+        <div style="display: flex; flex-direction: column; line-height: 1.3;">
+          <span style="font-size: 12px;">Mariana Rueda</span>
+          <span style="font-size: 11px; color: var(--color-neutral-600);">Cosmos S.A.</span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <main style="display: flex; flex-direction: column; min-width: 0;">
+
+    <header style="display: flex; align-items: flex-end; justify-content: space-between; gap: 22.4px; padding: 22.4px 28px 16.8px; border-bottom: 1px solid var(--color-neutral-900);">
+      <div style="display: flex; flex-direction: column; gap: 5.6px; max-width: 560px;">
+        <span style="font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--color-neutral-600);">{{ kicker }}</span>
+        <h1 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 26px; letter-spacing: -0.01em;">{{ title }}</h1>
+        <p style="margin: 0; color: var(--color-neutral-500); font-size: 12.5px; line-height: 1.55; text-wrap: pretty;">{{ subtitle }}</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 11.2px; white-space: nowrap;">
+        <div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.3; padding-right: 11.2px; border-right: 1px solid var(--color-neutral-900);">
+          <span style="font-size: 11px; color: var(--color-neutral-600);">Servicios activos</span>
+          <span style="font-family: var(--font-heading); font-size: 17px; font-variant-numeric: tabular-nums;">{{ activeCount }}</span>
+        </div>
+        <a href="#" style="display: flex; align-items: center; gap: 5.6px; padding: 8.4px 11.2px; border-radius: 8px; border: 1px solid var(--color-accent); color: var(--color-accent-200); font-size: 12px;" style-hover="background: var(--color-accent-900);">
+          <i class="ph ph-terminal-window" style="font-size: 14px;"></i>Quickstart
+        </a>
+      </div>
+    </header>
+
+    <sc-if value="{{ isServices }}" hint-placeholder-val="{{ true }}">
+      <div>
+        <section style="display: flex; align-items: center; gap: 8.4px; padding: 16.8px 28px; flex-wrap: wrap;">
+          <sc-for list="{{ filters }}" as="f" hint-placeholder-count="4">
+            <button onClick="{{ f.select }}" style="{{ f.style }}">{{ f.label }}<span style="{{ f.countStyle }}">{{ f.count }}</span></button>
+          </sc-for>
+          <div style="display: flex; align-items: center; gap: 5.6px; margin-left: auto; padding: 0 8.4px; border: 1px solid var(--color-neutral-800); border-radius: 8px; background: var(--color-surface); min-width: 240px;">
+            <i class="ph ph-magnifying-glass" style="font-size: 14px; color: var(--color-neutral-600);"></i>
+            <input value="{{ query }}" onChange="{{ onQuery }}" placeholder="Buscar rail, país o red" style="flex: 1; padding: 8.4px 0; background: transparent; border: 0; outline: none; color: var(--color-text); font-family: var(--font-body); font-size: 12px;">
+          </div>
+        </section>
+
+        <section style="display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16.8px; padding: 0 28px 28px; align-items: stretch;">
+          <sc-for list="{{ services }}" as="s" hint-placeholder-count="6">
+            <article style="{{ s.cardStyle }}">
+              <div style="display: flex; align-items: flex-start; justify-content: space-between; gap: 11.2px;">
+                <div style="display: flex; align-items: center; gap: 8.4px;">
+                  <div style="{{ s.iconStyle }}"><i class="{{ s.icon }}" style="font-size: 16px;"></i></div>
+                  <div style="display: flex; flex-direction: column; line-height: 1.3;">
+                    <span style="font-family: var(--font-heading); font-size: 14px;">{{ s.name }}</span>
+                    <span style="font-size: 11px; color: var(--color-neutral-600);">{{ s.category }}</span>
+                  </div>
+                </div>
+                <span style="{{ s.badgeStyle }}">{{ s.status }}</span>
+              </div>
+
+              <p style="margin: 0; font-size: 12.5px; line-height: 1.6; color: var(--color-neutral-400); text-wrap: pretty;">{{ s.blurb }}</p>
+
+              <div style="display: flex; flex-wrap: wrap; gap: 5.6px;">
+                <sc-for list="{{ s.chips }}" as="c" hint-placeholder-count="3">
+                  <span style="padding: 2.8px 8.4px; border-radius: 4px; background: var(--color-neutral-900); border: 1px solid var(--color-neutral-800); color: var(--color-neutral-400); font-size: 10.5px; letter-spacing: 0.04em;">{{ c }}</span>
+                </sc-for>
+              </div>
+
+              <div style="margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 11.2px; padding-top: 11.2px; border-top: 1px solid var(--color-neutral-900);">
+                <span style="font-size: 11px; color: var(--color-neutral-600); line-height: 1.4;">{{ s.requirement }}</span>
+                <button onClick="{{ s.toggle }}" style="{{ s.actionStyle }}">{{ s.action }}</button>
+              </div>
+            </article>
+          </sc-for>
+        </section>
+
+        <sc-if value="{{ noServices }}" hint-placeholder-val="{{ false }}">
+          <div style="padding: 0 28px 44px; color: var(--color-neutral-600); font-size: 12.5px;">Ningún servicio coincide con esta búsqueda.</div>
+        </sc-if>
+      </div>
+    </sc-if>
+
+    <sc-if value="{{ isActivity }}" hint-placeholder-val="{{ false }}">
+      <div>
+        <section style="display: flex; align-items: center; gap: 5.6px; padding: 11.2px 28px 0;">
+          <sc-for list="{{ tabs }}" as="tab" hint-placeholder-count="4">
+            <button onClick="{{ tab.select }}" style="{{ tab.style }}">{{ tab.label }}<span style="{{ tab.countStyle }}">{{ tab.count }}</span></button>
+          </sc-for>
+        </section>
+
+        <section style="display: flex; align-items: center; gap: 8.4px; padding: 16.8px 28px; flex-wrap: wrap;">
+          <div style="display: flex; align-items: center; gap: 5.6px; padding: 0 8.4px; border: 1px solid var(--color-neutral-800); border-radius: 8px; background: var(--color-surface); min-width: 260px;">
+            <i class="ph ph-magnifying-glass" style="font-size: 14px; color: var(--color-neutral-600);"></i>
+            <input value="{{ txQuery }}" onChange="{{ onTxQuery }}" placeholder="Buscar por contraparte o referencia" style="flex: 1; padding: 8.4px 0; background: transparent; border: 0; outline: none; color: var(--color-text); font-family: var(--font-body); font-size: 12px;">
+          </div>
+          <select value="{{ rail }}" onChange="{{ onRail }}" style="padding: 8.4px 28px 8.4px 11.2px; border: 1px solid var(--color-neutral-800); border-radius: 8px; background: var(--color-surface); color: var(--color-neutral-300); font-family: var(--font-body); font-size: 12px; cursor: pointer;">
+            <option value="all">Todos los rails</option>
+            <option value="Mercado Pago">Mercado Pago</option>
+            <option value="Etherfuse">Etherfuse</option>
+            <option value="Koywe">Koywe</option>
+            <option value="SEP-24">SEP-24</option>
+          </select>
+          <select value="{{ range }}" onChange="{{ onRange }}" style="padding: 8.4px 28px 8.4px 11.2px; border: 1px solid var(--color-neutral-800); border-radius: 8px; background: var(--color-surface); color: var(--color-neutral-300); font-family: var(--font-body); font-size: 12px; cursor: pointer;">
+            <option value="30">Últimos 30 días</option>
+            <option value="7">Últimos 7 días</option>
+            <option value="90">Últimos 90 días</option>
+          </select>
+          <button onClick="{{ resetTx }}" style="margin-left: auto; display: flex; align-items: center; gap: 5.6px; padding: 8.4px 11.2px; border-radius: 8px; background: transparent; border: 1px solid transparent; color: var(--color-neutral-600); font-family: var(--font-body); font-size: 12px; cursor: pointer;" style-hover="color: var(--color-neutral-300); border-color: var(--color-neutral-800);">
+            <i class="ph ph-arrow-counter-clockwise" style="font-size: 13px;"></i>Limpiar filtros
+          </button>
+        </section>
+
+        <section style="padding: 0 28px 28px; min-width: 0;">
+          <div style="border: 1px solid var(--color-neutral-900); border-radius: 14px; background: var(--color-surface); overflow-x: auto; overflow-y: hidden;">
+            <table style="width: 100%; min-width: 780px; border-collapse: collapse; font-size: 12.5px;">
+              <thead>
+                <tr style="background: #1e2030; color: var(--color-neutral-500); text-align: left;">
+                  <th style="padding: 11.2px 16.8px; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Fecha</th>
+                  <th style="padding: 11.2px 16.8px; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Orden</th>
+                  <th style="padding: 11.2px 16.8px; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Rail</th>
+                  <th style="padding: 11.2px 16.8px; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Liquidación</th>
+                  <th style="padding: 11.2px 16.8px; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase;">Estado</th>
+                  <th onClick="{{ toggleSort }}" style="padding: 11.2px 16.8px; font-weight: 500; font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; text-align: right; cursor: pointer; user-select: none; white-space: nowrap;" style-hover="color: var(--color-accent-200);">Monto {{ sortMark }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                <sc-for list="{{ rows }}" as="r" hint-placeholder-count="8">
+                  <tr style="border-top: 1px solid var(--color-neutral-900);" style-hover="background: #262838;">
+                    <td style="padding: 12.6px 16.8px; white-space: nowrap;">
+                      <div style="display: flex; flex-direction: column; line-height: 1.35;">
+                        <span style="color: var(--color-neutral-200);">{{ r.date }}</span>
+                        <span style="font-size: 11px; color: var(--color-neutral-600);">{{ r.time }}</span>
+                      </div>
+                    </td>
+                    <td style="padding: 12.6px 16.8px;">
+                      <div style="display: flex; flex-direction: column; line-height: 1.35;">
+                        <span style="white-space: nowrap; font-variant-numeric: tabular-nums;">{{ r.ref }}</span>
+                        <span style="font-size: 11px; color: var(--color-neutral-600); white-space: nowrap;">{{ r.kind }}</span>
+                      </div>
+                    </td>
+                    <td style="padding: 12.6px 16.8px; color: var(--color-neutral-400); white-space: nowrap;">{{ r.rail }}</td>
+                    <td style="padding: 12.6px 16.8px; color: var(--color-neutral-400); white-space: nowrap;">{{ r.settlement }}</td>
+                    <td style="padding: 12.6px 16.8px;"><span style="{{ r.badgeStyle }}">{{ r.status }}</span></td>
+                    <td style="padding: 12.6px 16.8px; text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap;">
+                      <div style="display: flex; flex-direction: column; align-items: flex-end; line-height: 1.35;">
+                        <span style="{{ r.amountStyle }}">{{ r.amount }}</span>
+                        <span style="font-size: 11px; color: var(--color-neutral-600);">{{ r.crypto }}</span>
+                      </div>
+                    </td>
+                  </tr>
+                </sc-for>
+              </tbody>
+            </table>
+
+            <sc-if value="{{ empty }}" hint-placeholder-val="{{ false }}">
+              <div style="padding: 44px 16.8px; text-align: center; color: var(--color-neutral-600); font-size: 12.5px;">Ninguna orden coincide con estos filtros.</div>
+            </sc-if>
+
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 16.8px; padding: 11.2px 16.8px; border-top: 1px solid var(--color-neutral-900); background: #1e2030;">
+              <span style="font-size: 11.5px; color: var(--color-neutral-600);">{{ summary }}</span>
+              <div style="display: flex; align-items: center; gap: 5.6px;">
+                <button onClick="{{ prev }}" style="{{ prevStyle }}"><i class="ph ph-caret-left" style="font-size: 13px;"></i></button>
+                <span style="font-size: 11.5px; color: var(--color-neutral-500); padding: 0 5.6px;">{{ pageLabel }}</span>
+                <button onClick="{{ next }}" style="{{ nextStyle }}"><i class="ph ph-caret-right" style="font-size: 13px;"></i></button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </sc-if>
+  </main>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;rowsPerPage&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:8,&quot;min&quot;:4,&quot;max&quot;:16,&quot;tsType&quot;:&quot;number&quot;}}">
+const SERVICES = [
+  { id: "mercadopago", name: "Mercado Pago", category: "Cobros fiat", icon: "ph ph-link-simple",
+    blurb: "Links de pago de Checkout Pro y cobros PIX desde una cuenta por país, con verificación de webhook incluida.",
+    chips: ["AR", "BR", "MX", "CL", "CO", "PE", "UY"],
+    requirement: "Requiere access token", state: "active" },
+  { id: "etherfuse", name: "Etherfuse", category: "Ramp cripto", icon: "ph ph-arrows-left-right",
+    blurb: "BRL·PIX y MXN·SPEI contra Solana, Stellar, Base, Polygon y Monad. Mueve la pata cripto por su cuenta.",
+    chips: ["PIX", "SPEI", "Solana", "Stellar", "Base", "Polygon", "Monad"],
+    requirement: "Requiere API key", state: "sandbox" },
+  { id: "koywe", name: "Koywe", category: "Ramp cripto", icon: "ph ph-swap",
+    blurb: "ARS, CLP, MXN, COP, PEN y BRL contra USDC en Stellar, con KYC delegado y cuentas bancarias registradas.",
+    chips: ["ARS", "CLP", "MXN", "COP", "PEN", "BRL", "USDC"],
+    requirement: "Requiere client ID y secret", state: "available" },
+  { id: "settlement", name: "Liquidación automática", category: "Infraestructura", icon: "ph ph-lightning",
+    blurb: "Construye el cobro, verifica el webhook y el monto pagado, y libera el activo al wallet del usuario.",
+    chips: ["Onramp", "Offramp", "Idempotente"],
+    requirement: "Requiere tu función settlement", state: "active" },
+  { id: "oracle", name: "Precio con spread", category: "Infraestructura", icon: "ph ph-chart-line-up",
+    blurb: "Tasa media de CoinGecko más tu propio spread, congelada en el momento en que se arma el pago.",
+    chips: ["CoinGecko", "Spread propio"],
+    requirement: "Opcional: API key de CoinGecko", state: "active" },
+  { id: "sep", name: "Anchors SEP", category: "Infraestructura", icon: "ph ph-anchor",
+    blurb: "SEP-1, SEP-10 y SEP-24: descubrimiento del anchor, autenticación y el flujo alojado de depósito y retiro.",
+    chips: ["SEP-1", "SEP-10", "SEP-24"],
+    requirement: "Sin credenciales; apunta a un dominio", state: "available" },
+  { id: "webhooks", name: "Webhooks firmados", category: "Infraestructura", icon: "ph ph-webhooks-logo",
+    blurb: "Entrega firmada a tus endpoints en cada movimiento de una orden, desde order.created hasta order.completed.",
+    chips: ["HMAC", "8 eventos"],
+    requirement: "Requiere endpoint y secret", state: "active" },
+  { id: "custom", name: "Proveedores propios", category: "Infraestructura", icon: "ph ph-plugs",
+    blurb: "Envuelve cualquier API de pagos con links, QR, normalización de estados y webhooks, sin escribir el proveedor a mano.",
+    chips: ["createCustomProvider", "HMAC"],
+    requirement: "Requiere tu propia API", state: "available" },
+  { id: "pix", name: "QR PIX estándar", category: "Cobros fiat", icon: "ph ph-qr-code",
+    blurb: "Genera y valida BR Codes EMV (copia e cola) como utilidad local, sin llamar a ninguna API.",
+    chips: ["BRL", "EMV", "Sin API"],
+    requirement: "Sin credenciales", state: "active" }
+];
+
+const FILTERS = [
+  { id: "all", label: "Todos" },
+  { id: "Cobros fiat", label: "Cobros fiat" },
+  { id: "Ramp cripto", label: "Ramp cripto" },
+  { id: "Infraestructura", label: "Infraestructura" },
+  { id: "contracted", label: "Contratados" }
+];
+
+const ORDERS = [
+  { date: "8 ago 2026", time: "09:41", ref: "ord-90412", kind: "Onramp", rail: "Mercado Pago", settlement: "USDC · Stellar", status: "Completada", value: 5000, cur: "ARS", crypto: "4.90 USDC" },
+  { date: "8 ago 2026", time: "08:02", ref: "ord-90408", kind: "Onramp", rail: "Etherfuse", settlement: "TESOURO · Solana", status: "Completada", value: 500, cur: "BRL", crypto: "498.20 TESOURO" },
+  { date: "7 ago 2026", time: "21:15", ref: "ord-90387", kind: "Offramp", rail: "Koywe", settlement: "Payout ARS", status: "Completada", value: 100, cur: "USDC", crypto: "98,120.00 ARS" },
+  { date: "7 ago 2026", time: "18:30", ref: "ord-90371", kind: "Onramp", rail: "Mercado Pago", settlement: "USDC · Stellar", status: "Liquidando", value: 12800, cur: "ARS", crypto: "12.54 USDC" },
+  { date: "7 ago 2026", time: "13:04", ref: "ord-90355", kind: "Onramp", rail: "SEP-24", settlement: "USDC · Stellar", status: "Pendiente", value: 250, cur: "USD", crypto: "249.10 USDC" },
+  { date: "6 ago 2026", time: "19:47", ref: "ord-90340", kind: "Onramp", rail: "Etherfuse", settlement: "CETES · Base", status: "Completada", value: 8400, cur: "MXN", crypto: "8,312.00 CETES" },
+  { date: "6 ago 2026", time: "12:22", ref: "ord-90322", kind: "Offramp", rail: "Mercado Pago", settlement: "Payout ARS", status: "Payout pendiente", value: 320, cur: "USDC", crypto: "313,600.00 ARS" },
+  { date: "6 ago 2026", time: "10:09", ref: "ord-90310", kind: "Onramp", rail: "Koywe", settlement: "USDC · Stellar", status: "Completada", value: 10000, cur: "ARS", crypto: "9.80 USDC" },
+  { date: "5 ago 2026", time: "22:58", ref: "ord-90298", kind: "Onramp", rail: "Mercado Pago", settlement: "USDC · Stellar", status: "Rechazada", value: 1500, cur: "ARS", crypto: "—" },
+  { date: "5 ago 2026", time: "16:41", ref: "ord-90284", kind: "Onramp", rail: "Etherfuse", settlement: "TESOURO · Polygon", status: "Completada", value: 1200, cur: "BRL", crypto: "1,196.40 TESOURO" },
+  { date: "5 ago 2026", time: "11:13", ref: "ord-90271", kind: "Offramp", rail: "Koywe", settlement: "Payout CLP", status: "Completada", value: 450, cur: "USDC", crypto: "421,650.00 CLP" },
+  { date: "4 ago 2026", time: "20:05", ref: "ord-90259", kind: "Onramp", rail: "SEP-24", settlement: "USDC · Stellar", status: "Pendiente", value: 75, cur: "USD", crypto: "74.70 USDC" },
+  { date: "4 ago 2026", time: "14:36", ref: "ord-90244", kind: "Onramp", rail: "Mercado Pago", settlement: "USDC · Stellar", status: "Completada", value: 6000, cur: "MXN", crypto: "296.40 USDC" },
+  { date: "4 ago 2026", time: "09:18", ref: "ord-90230", kind: "Onramp", rail: "Koywe", settlement: "USDC · Stellar", status: "Rechazada", value: 2840, cur: "COP", crypto: "—" },
+  { date: "3 ago 2026", time: "17:52", ref: "ord-90215", kind: "Offramp", rail: "Etherfuse", settlement: "Payout BRL", status: "Completada", value: 900, cur: "USDC", crypto: "4,905.00 BRL" },
+  { date: "3 ago 2026", time: "08:44", ref: "ord-90201", kind: "Onramp", rail: "Mercado Pago", settlement: "USDC · Stellar", status: "Completada", value: 2100, cur: "ARS", crypto: "2.06 USDC" }
+];
+
+const TABS = [
+  { id: "all", label: "Todas" },
+  { id: "Onramp", label: "Onramp" },
+  { id: "Offramp", label: "Offramp" },
+  { id: "open", label: "En curso" }
+];
+
+const STATE_LABEL = { active: "Activo", sandbox: "Sandbox", available: "Disponible" };
+
+class Component extends DCLogic {
+  state = {
+    view: "services", env: "sandbox", filter: "all", query: "",
+    states: SERVICES.reduce((acc, s) => Object.assign(acc, { [s.id]: s.state }), {}),
+    tab: "all", txQuery: "", rail: "all", range: "30", sort: "desc", page: 0
+  };
+
+  pill(active) {
+    return {
+      flex: 1, padding: "5.6px 8.4px", borderRadius: "8px", border: 0, cursor: "pointer",
+      fontFamily: "var(--font-body)", fontSize: "11.5px",
+      background: active ? "var(--color-accent-900)" : "transparent",
+      color: active ? "var(--color-accent-200)" : "var(--color-neutral-500)",
+      boxShadow: active ? "inset 0 0 0 1px var(--color-accent-800)" : "none"
+    };
+  }
+
+  badge(kind) {
+    const base = { display: "inline-flex", alignItems: "center", padding: "2.8px 8.4px", borderRadius: "999px", fontSize: "10.5px", lineHeight: 1.6, whiteSpace: "nowrap", border: "1px solid transparent" };
+    if (kind === "accent") return Object.assign({}, base, { background: "var(--color-accent-900)", color: "var(--color-accent-200)", borderColor: "var(--color-accent-800)" });
+    if (kind === "outline") return Object.assign({}, base, { background: "transparent", color: "var(--color-neutral-300)", borderColor: "var(--color-neutral-700)" });
+    return Object.assign({}, base, { background: "var(--color-neutral-900)", color: "var(--color-neutral-500)", borderColor: "var(--color-neutral-800)" });
+  }
+
+  matchesOrder(r, tab) {
+    const q = this.state.txQuery.trim().toLowerCase();
+    if (tab === "Onramp" && r.kind !== "Onramp") return false;
+    if (tab === "Offramp" && r.kind !== "Offramp") return false;
+    if (tab === "open" && r.status !== "Liquidando" && r.status !== "Pendiente" && r.status !== "Payout pendiente") return false;
+    if (this.state.rail !== "all" && r.rail !== this.state.rail) return false;
+    if (q && !(r.ref.toLowerCase().includes(q) || r.rail.toLowerCase().includes(q) || r.settlement.toLowerCase().includes(q))) return false;
+    return true;
+  }
+
+  renderVals() {
+    const st = this.state;
+    const isServices = st.view === "services";
+    const contracted = SERVICES.filter((s) => st.states[s.id] !== "available");
+
+    const navItem = (id, label, icon) => ({
+      label, icon,
+      select: () => this.setState({ view: id }),
+      style: {
+        display: "flex", alignItems: "center", gap: "8.4px", padding: "8.4px", width: "100%",
+        borderRadius: "8px", border: 0, cursor: "pointer", textAlign: "left",
+        fontFamily: "var(--font-body)", fontSize: "12.5px",
+        background: st.view === id ? "var(--color-accent-900)" : "transparent",
+        color: st.view === id ? "var(--color-accent-200)" : "var(--color-neutral-400)",
+        boxShadow: st.view === id ? "inset 2px 0 0 var(--color-accent)" : "none"
+      }
+    });
+
+    const q = st.query.trim().toLowerCase();
+    const visible = SERVICES.filter((s) => {
+      if (st.filter === "contracted" && st.states[s.id] === "available") return false;
+      if (st.filter !== "all" && st.filter !== "contracted" && s.category !== st.filter) return false;
+      if (q && !(s.name + " " + s.blurb + " " + s.chips.join(" ")).toLowerCase().includes(q)) return false;
+      return true;
+    });
+
+    const perPage = Math.max(4, this.props.rowsPerPage ?? 8);
+    const filtered = ORDERS.filter((r) => this.matchesOrder(r, st.tab)).slice()
+      .sort((a, b) => (st.sort === "desc" ? b.value - a.value : a.value - b.value));
+    const pages = Math.max(1, Math.ceil(filtered.length / perPage));
+    const page = Math.min(st.page, pages - 1);
+    const navBtn = (enabled) => ({
+      display: "grid", placeItems: "center", width: "26px", height: "26px", borderRadius: "8px",
+      background: "transparent", border: "1px solid var(--color-neutral-800)",
+      color: "var(--color-neutral-300)", cursor: enabled ? "pointer" : "default", opacity: enabled ? 1 : 0.45
+    });
+
+    return {
+      nav: [
+        navItem("services", "Servicios", "ph ph-squares-four"),
+        navItem("activity", "Órdenes", "ph ph-list-checks")
+      ],
+      isServices, isActivity: st.view === "activity",
+      kicker: isServices ? "Catálogo" : "Movimiento",
+      title: isServices ? "Servicios" : "Órdenes",
+      subtitle: isServices
+        ? "Activa los rails que tu producto necesita. Cada servicio queda disponible desde el mismo NoaClient en cuanto lo contratas."
+        : "Cada orden creada desde tus rails contratados, con la liquidación que le corresponde.",
+      activeCount: contracted.length + " / " + SERVICES.length,
+
+      sandboxStyle: this.pill(st.env === "sandbox"),
+      prodStyle: this.pill(st.env === "production"),
+      setSandbox: () => this.setState({ env: "sandbox" }),
+      setProd: () => this.setState({ env: "production" }),
+
+      filters: FILTERS.map((f) => {
+        const active = st.filter === f.id;
+        const count = f.id === "all" ? SERVICES.length
+          : f.id === "contracted" ? contracted.length
+          : SERVICES.filter((s) => s.category === f.id).length;
+        return {
+          label: f.label, count,
+          select: () => this.setState({ filter: f.id }),
+          style: {
+            display: "flex", alignItems: "center", gap: "5.6px", padding: "5.6px 11.2px",
+            borderRadius: "999px", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: "12px",
+            background: active ? "var(--color-accent-900)" : "transparent",
+            border: "1px solid " + (active ? "var(--color-accent-800)" : "var(--color-neutral-800)"),
+            color: active ? "var(--color-accent-200)" : "var(--color-neutral-400)"
+          },
+          countStyle: { fontSize: "10.5px", color: active ? "var(--color-accent-300)" : "var(--color-neutral-600)" }
+        };
+      }),
+
+      services: visible.map((s) => {
+        const state = st.states[s.id];
+        const on = state !== "available";
+        return {
+          name: s.name, category: s.category, blurb: s.blurb, chips: s.chips,
+          requirement: s.requirement, icon: s.icon, status: STATE_LABEL[state],
+          cardStyle: {
+            display: "flex", flexDirection: "column", gap: "11.2px", padding: "16.8px",
+            borderRadius: "14px", background: "var(--color-surface)",
+            border: "1px solid " + (on ? "var(--color-accent-800)" : "var(--color-neutral-900)"),
+            boxShadow: state === "active" ? "0 0 24px -18px var(--color-accent)" : "none"
+          },
+          iconStyle: {
+            width: "30px", height: "30px", borderRadius: "8px", display: "grid", placeItems: "center",
+            border: "1px solid " + (on ? "var(--color-accent-800)" : "var(--color-neutral-800)"),
+            color: on ? "var(--color-accent-200)" : "var(--color-neutral-500)"
+          },
+          badgeStyle: this.badge(state === "active" ? "accent" : state === "sandbox" ? "outline" : "neutral"),
+          action: on ? "Configurar" : "Contratar",
+          actionStyle: {
+            padding: "5.6px 11.2px", borderRadius: "8px", cursor: "pointer", whiteSpace: "nowrap",
+            fontFamily: "var(--font-body)", fontSize: "12px", background: "transparent",
+            border: "1px solid " + (on ? "var(--color-neutral-700)" : "var(--color-accent)"),
+            color: on ? "var(--color-neutral-300)" : "var(--color-accent-200)"
+          },
+          toggle: () => this.setState({
+            states: Object.assign({}, st.states, { [s.id]: on ? "available" : (st.env === "sandbox" ? "sandbox" : "active") })
+          })
+        };
+      }),
+      noServices: visible.length === 0,
+      query: st.query,
+      onQuery: (e) => this.setState({ query: e.target.value }),
+
+      tabs: TABS.map((t) => {
+        const active = st.tab === t.id;
+        return {
+          label: t.label,
+          count: ORDERS.filter((r) => this.matchesOrder(r, t.id)).length,
+          select: () => this.setState({ tab: t.id, page: 0 }),
+          style: {
+            display: "flex", alignItems: "center", gap: "5.6px", padding: "8.4px 11.2px",
+            borderRadius: "8px 8px 0 0", background: "transparent", cursor: "pointer",
+            fontFamily: "var(--font-body)", fontSize: "12.5px", border: 0,
+            borderBottom: active ? "1px solid var(--color-accent)" : "1px solid transparent",
+            color: active ? "var(--color-text)" : "var(--color-neutral-500)"
+          },
+          countStyle: {
+            fontSize: "10.5px", padding: "1px 5.6px", borderRadius: "999px",
+            background: active ? "var(--color-accent-900)" : "var(--color-neutral-900)",
+            color: active ? "var(--color-accent-200)" : "var(--color-neutral-600)"
+          }
+        };
+      }),
+
+      rows: filtered.slice(page * perPage, page * perPage + perPage).map((r) => ({
+        date: r.date, time: r.time, ref: r.ref, kind: r.kind, rail: r.rail,
+        settlement: r.settlement, status: r.status, crypto: r.crypto,
+        badgeStyle: this.badge(r.status === "Completada" ? "accent" : r.status === "Rechazada" ? "neutral" : "outline"),
+        amount: r.value.toLocaleString("es-MX", { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + " " + r.cur,
+        amountStyle: {
+          fontSize: "13px",
+          color: r.status === "Rechazada" ? "var(--color-neutral-600)" : "var(--color-neutral-200)",
+          textDecoration: r.status === "Rechazada" ? "line-through" : "none"
+        }
+      })),
+      empty: filtered.length === 0,
+      summary: filtered.length + " de " + ORDERS.length + " órdenes · entorno " + (st.env === "sandbox" ? "sandbox" : "producción"),
+      pageLabel: (page + 1) + " / " + pages,
+      sortMark: st.sort === "desc" ? "↓" : "↑",
+      txQuery: st.txQuery, rail: st.rail, range: st.range,
+      onTxQuery: (e) => this.setState({ txQuery: e.target.value, page: 0 }),
+      onRail: (e) => this.setState({ rail: e.target.value, page: 0 }),
+      onRange: (e) => this.setState({ range: e.target.value, page: 0 }),
+      toggleSort: () => this.setState({ sort: st.sort === "desc" ? "asc" : "desc" }),
+      resetTx: () => this.setState({ tab: "all", txQuery: "", rail: "all", range: "30", page: 0 }),
+      prev: () => this.setState({ page: Math.max(0, page - 1) }),
+      next: () => this.setState({ page: Math.min(pages - 1, page + 1) }),
+      prevStyle: navBtn(page > 0),
+      nextStyle: navBtn(page < pages - 1)
+    };
+  }
+}
+
+</script>
+</body>
+</html>

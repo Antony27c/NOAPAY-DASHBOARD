@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nocturne-49063f70-b521-437d-9b6b-66d6d694a5d1/styles.css">
+<script src="_ds/nocturne-49063f70-b521-437d-9b6b-66d6d694a5d1/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+  body { margin: 0; background: #f4f5fb; color: #292b31; font-family: var(--font-body); }
+  a { color: #5d5294; text-decoration: none; }
+  a:hover { color: #423a6a; }
+  :focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  ::selection { background: #d2cefd; }
+</style>
+</helmet>
+
+<div style="background: #f4f5fb; color: #292b31; font-family: var(--font-body); overflow-x: hidden;">
+
+  
+
+  
+
+  <section style="position: relative; background: radial-gradient(120% 90% at 78% 8%, #2b2741 0%, #1d1f2f 42%, #161826 100%); color: var(--color-text); overflow: hidden;">
+    
+    <div style="position: absolute; left: 0; right: 0; bottom: 0; height: 1px; background: linear-gradient(90deg, rgba(233,233,237,0) 0%, rgba(145,132,217,0.5) 50%, rgba(233,233,237,0) 100%);"></div>
+
+    <header style="position: relative; display: flex; align-items: center; justify-content: space-between; gap: 22.4px; max-width: 1160px; margin: 0 auto; padding: 22.4px 44px; width: 1185px; height: 105px">
+      <div style="display: flex; align-items: center; font-family: var(--font-heading); font-weight: 600; letter-spacing: 0.09em; font-size: 19px; line-height: 1;">
+        <span>N</span>
+        <img src="assets/novapay-light.png" alt="O" style="width: 16px; height: 16px; margin: 0 0.05em; display: block;">
+        <span>APAY</span>
+      </div>
+      <nav style="display: flex; align-items: center; gap: 22.4px; font-size: 13px;">
+        <a href="#casos" style="color: var(--color-neutral-400);" style-hover="color: var(--color-neutral-100);">Casos de uso</a>
+        <a href="#rails" style="color: var(--color-neutral-400);" style-hover="color: var(--color-neutral-100);">Rails</a>
+        <a href="#flujo" style="color: var(--color-neutral-400);" style-hover="color: var(--color-neutral-100);">Cómo funciona</a>
+        <a href="#precios" style="color: var(--color-neutral-400);" style-hover="color: var(--color-neutral-100);">Precios</a>
+        <a href="#faq" style="color: var(--color-neutral-400);" style-hover="color: var(--color-neutral-100);">Preguntas</a>
+      </nav>
+      <a href="NOAPAY%20Console.dc.html" style="display: inline-flex; align-items: center; gap: 5.6px; padding: 8.4px 16.8px; border-radius: 8px; border: 1px solid var(--color-accent); color: var(--color-accent-200); font-size: 13px; transition: background 180ms ease, transform 180ms ease;" style-hover="background: var(--color-accent-900); transform: translateY(-1px);">
+        Abrir consola<i class="ph ph-arrow-up-right" style="font-size: 14px;"></i>
+      </a>
+    </header>
+
+    <div style="position: relative; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 44px; align-items: center; max-width: 1160px; margin: 0 auto; padding: 78px 44px 62px;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 22.4px;" data-reveal="1">
+        <span style="display: inline-flex; align-items: center; gap: 5.6px; padding: 5.6px 11.2px; border-radius: 999px; border: 1px solid var(--color-accent-800); background: rgba(145,132,217,0.08); color: var(--color-accent-200); font-size: 12px;">
+          <i class="ph ph-globe-hemisphere-west" style="font-size: 14px;"></i>Onramp y offramp para Latinoamérica
+        </span>
+        <h1 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 62px; line-height: 1.02; letter-spacing: -0.03em; text-wrap: balance;">Un solo cliente para todos los rails de la región</h1>
+        <p style="margin: 0; max-width: 31em; font-size: 16px; line-height: 1.65; color: var(--color-neutral-400); text-wrap: pretty;">NoaClient conecta Mercado Pago, PIX y SPEI con la liberación automática de stablecoins, anchors SEP en Stellar y precio de CoinGecko con tu propio spread. Sin SDK de ningún proveedor: todo habla REST con fetch.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 11.2px;">
+          <a href="NOAPAY%20Console.dc.html" style="display: inline-flex; align-items: center; gap: 5.6px; padding: 13px 22.4px; border-radius: 8px; border: 1px solid var(--color-accent); color: var(--color-accent-200); font-size: 14px; transition: background 180ms ease, transform 180ms ease;" style-hover="background: var(--color-accent-900); transform: translateY(-1px);">
+            <i class="ph ph-plugs-connected" style="font-size: 16px;"></i>Contratar servicios
+          </a>
+          <a href="#flujo" style="display: inline-flex; align-items: center; gap: 5.6px; padding: 13px 22.4px; border-radius: 8px; border: 1px solid var(--color-neutral-800); color: var(--color-neutral-200); font-size: 14px; transition: border-color 180ms ease, transform 180ms ease;" style-hover="border-color: var(--color-neutral-600); transform: translateY(-1px);">
+            Ver el flujo
+          </a>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 16.8px; padding-top: 5.6px; font-size: 12px; color: var(--color-neutral-600);">
+          <span>Node ≥ 18</span><span>ESM y CJS</span><span>Tipos incluidos</span><span>Licencia MIT</span>
+        </div>
+      </div>
+
+      <div style="border-radius: 14px; background: #1e2030; box-shadow: 0 0 0 1px #2b2741, 0 40px 80px -40px rgba(0,0,0,0.85), 0 0 90px -50px var(--color-accent); overflow: hidden;" data-reveal="1">
+        <div style="display: flex; align-items: center; gap: 5.6px; padding: 8.4px 11.2px; border-bottom: 1px solid #292b31; overflow-x: auto;">
+          <sc-for list="{{ snippetTabs }}" as="t" hint-placeholder-count="4">
+            <button onClick="{{ t.select }}" style="{{ t.style }}">{{ t.label }}</button>
+          </sc-for>
+          <span style="margin-left: auto; font-size: 11.5px; color: #75798c; padding-right: 5.6px;">{{ snippetFile }}</span>
+        </div>
+        <sc-if value="{{ isMercadoPago }}" hint-placeholder-val="{{ true }}">
+          <pre style="margin: 0; padding: 22.4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.85; color: #cfd3e5; overflow-x: auto;"><span style="color: #75798c;">import</span> { NoaClient, FiatCurrency } <span style="color: #75798c;">from</span> <span style="color: #b5abfc;">"noa-pay"</span>;
+
+<span style="color: #75798c;">const</span> noa = <span style="color: #75798c;">new</span> <span style="color: #d2cefd;">NoaClient</span>({
+  mercadopago: { accessToken, sandbox: <span style="color: #b5abfc;">true</span> },
+  settlement: <span style="color: #75798c;">async</span> ({ wallet, amount, asset }) =&gt;
+    ({ txId: <span style="color: #75798c;">await</span> myWallet.<span style="color: #d2cefd;">transfer</span>(asset, amount, wallet) }),
+});
+
+<span style="color: #75798c;">const</span> charge = <span style="color: #75798c;">await</span> noa.<span style="color: #d2cefd;">createPaymentLink</span>({
+  amount: <span style="color: #b5abfc;">5000</span>,
+  currency: FiatCurrency.ARS,
+  reference: <span style="color: #b5abfc;">"order-1"</span>,
+});
+
+charge.link; <span style="color: #595d6c;">// URL de Checkout Pro</span>
+charge.qrImage; <span style="color: #595d6c;">// PNG listo para incrustar</span></pre>
+        </sc-if>
+        <sc-if value="{{ isEtherfuse }}" hint-placeholder-val="{{ false }}">
+          <pre style="margin: 0; padding: 22.4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.85; color: #cfd3e5; overflow-x: auto;"><span style="color: #75798c;">const</span> noa = <span style="color: #75798c;">new</span> <span style="color: #d2cefd;">NoaClient</span>({
+  etherfuse: { apiKey, environment: <span style="color: #b5abfc;">"sandbox"</span> },
+});
+
+<span style="color: #595d6c;">// El activo se resuelve en vivo, nunca se codifica</span>
+<span style="color: #75798c;">const</span> catalog = <span style="color: #75798c;">await</span> noa.etherfuse.lookup.<span style="color: #d2cefd;">stablebonds</span>();
+
+<span style="color: #75798c;">const</span> quote = <span style="color: #75798c;">await</span> noa.etherfuse.quotes.<span style="color: #d2cefd;">create</span>({ <span style="color: #595d6c;">/* ... */</span> });
+<span style="color: #75798c;">const</span> receipt = <span style="color: #75798c;">await</span> quote.<span style="color: #d2cefd;">createOrder</span>({
+  bankAccountId,
+  publicKey: <span style="color: #b5abfc;">"USER_SOLANA_ADDRESS"</span>,
+});
+
+receipt.<span style="color: #d2cefd;">createPixQr</span>(); <span style="color: #595d6c;">// QR listo para el usuario</span></pre>
+        </sc-if>
+        <sc-if value="{{ isKoywe }}" hint-placeholder-val="{{ false }}">
+          <pre style="margin: 0; padding: 22.4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.85; color: #cfd3e5; overflow-x: auto;"><span style="color: #75798c;">const</span> providers = <span style="color: #75798c;">await</span> noa.koywe.<span style="color: #d2cefd;">getPaymentProviders</span>(
+  FiatCurrency.ARS,
+); <span style="color: #595d6c;">// WIREAR (CVU), QRI-AR (QR)...</span>
+
+<span style="color: #75798c;">const</span> quote = <span style="color: #75798c;">await</span> noa.koywe.<span style="color: #d2cefd;">getQuote</span>({
+  ramp: <span style="color: #b5abfc;">"onramp"</span>,
+  fiatCurrency: FiatCurrency.ARS,
+  amount: <span style="color: #b5abfc;">"10000"</span>,
+  paymentMethodId: providers[<span style="color: #b5abfc;">0</span>].id,
+});
+
+<span style="color: #75798c;">const</span> order = <span style="color: #75798c;">await</span> noa.koywe.<span style="color: #d2cefd;">createOnRampOrder</span>({
+  quoteId: quote.id,
+  stellarAddress: <span style="color: #b5abfc;">"USER_STELLAR_ADDRESS"</span>,
+});
+
+order.interactiveUrl; <span style="color: #595d6c;">// checkout / estado</span></pre>
+        </sc-if>
+        <sc-if value="{{ isSep }}" hint-placeholder-val="{{ false }}">
+          <pre style="margin: 0; padding: 22.4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.85; color: #cfd3e5; overflow-x: auto;"><span style="color: #75798c;">const</span> noa = <span style="color: #75798c;">new</span> <span style="color: #d2cefd;">NoaClient</span>({}); <span style="color: #595d6c;">// sin proveedores</span>
+
+<span style="color: #75798c;">const</span> toml = <span style="color: #75798c;">await</span> noa.sep.<span style="color: #d2cefd;">fetchStellarToml</span>(
+  <span style="color: #b5abfc;">"testanchor.stellar.org"</span>,
+);
+
+<span style="color: #595d6c;">// Las llaves privadas nunca salen de tu firmante</span>
+<span style="color: #75798c;">const</span> jwt = <span style="color: #75798c;">await</span> noa.sep.<span style="color: #d2cefd;">authenticateSep10</span>({
+  webAuthEndpoint: toml.WEB_AUTH_ENDPOINT,
+  account,
+  sign: (xdr, network) =&gt; myWallet.<span style="color: #d2cefd;">signTransaction</span>(xdr, network),
+});
+
+<span style="color: #75798c;">const</span> { url, id } = <span style="color: #75798c;">await</span> noa.sep.<span style="color: #d2cefd;">startDeposit</span>({
+  transferServer: toml.TRANSFER_SERVER_SEP0024,
+  jwt, assetCode: Asset.USDC, account,
+});</pre>
+        </sc-if>
+      </div>
+    <div style="position: absolute; top: -253px; width: 620px; height: 620px; border-radius: 999px; background: radial-gradient(closest-side, rgba(145,132,217,0.22), rgba(145,132,217,0)); pointer-events: none; left: 853px"></div></div><div style="position: relative; max-width: 1160px; margin: 0 auto; padding: 0 44px 44px; display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 12.5px; color: var(--color-neutral-600); width: 1190px; height: 101px" data-reveal="1">
+      <span style="letter-spacing: 0.14em; text-transform: uppercase; font-size: 11px;">Rails conectados</span>
+      <span style="color: var(--color-neutral-300);">Mercado Pago</span>
+      <span style="color: var(--color-neutral-300);">PIX</span>
+      <span style="color: var(--color-neutral-300);">SPEI</span>
+      <span style="color: var(--color-neutral-300);">Etherfuse</span>
+      <span style="color: var(--color-neutral-300);">Koywe</span>
+      <span style="color: var(--color-neutral-300);">Anchors SEP</span>
+    </div>
+
+    
+  </section><section id="casos" style="max-width: 1160px; margin: 0 auto; padding: 78px 44px 44px;">
+    <div style="display: flex; flex-direction: column; gap: 8.4px; margin-bottom: 28px;" data-reveal="1">
+      <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #75798c;">Casos de uso</span>
+      <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 34px; letter-spacing: -0.02em; max-width: 18em; text-wrap: balance;">Tres formas de mover dinero entre pesos y stablecoins</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16.8px;">
+      <sc-for list="{{ cases }}" as="c" hint-placeholder-count="3">
+        <article data-reveal="1" style="display: flex; flex-direction: column; gap: 11.2px; padding: 28px; border-radius: 14px; background: #ffffff; border: 1px solid #eceefa; box-shadow: 0 1px 2px rgba(41,43,49,0.05), 0 18px 40px -30px rgba(41,43,49,0.5); transition: transform 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); box-shadow: 0 1px 2px rgba(41,43,49,0.06), 0 26px 50px -30px rgba(41,43,49,0.55);">
+          <div style="width: 34px; height: 34px; border-radius: 8px; display: grid; place-items: center; background: #f5f4ff; color: #5d5294;"><i class="{{ c.icon }}" style="font-size: 18px;"></i></div>
+          <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 17px;">{{ c.title }}</h3>
+          <p style="margin: 0; font-size: 13.5px; line-height: 1.65; color: #595d6c; text-wrap: pretty;">{{ c.body }}</p>
+          <span style="margin-top: auto; padding-top: 8.4px; font-size: 12px; color: #796cbf;">{{ c.meta }}</span>
+        </article>
+      </sc-for>
+    </div>
+  </section><section id="rails" style="max-width: 1160px; margin: 0 auto; padding: 44px;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 22.4px; margin-bottom: 28px;" data-reveal="1">
+      <div style="display: flex; flex-direction: column; gap: 8.4px;">
+        <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #75798c;">Rails</span>
+        <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 34px; letter-spacing: -0.02em; max-width: 16em; text-wrap: balance;">Fiat regional y cripto en el mismo objeto de configuración</h2>
+      </div>
+      <a href="NOAPAY%20Console.dc.html" style="font-size: 13px; white-space: nowrap;">Ver los 9 servicios →</a>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 16.8px;">
+      <sc-for list="{{ rails }}" as="r" hint-placeholder-count="4">
+        <article data-reveal="1" style="display: flex; flex-direction: column; gap: 11.2px; padding: 22.4px; border-radius: 14px; background: #ffffff; border: 1px solid #eceefa; box-shadow: 0 1px 2px rgba(41,43,49,0.05), 0 14px 34px -26px rgba(41,43,49,0.45); transition: transform 220ms ease, border-color 220ms ease;" style-hover="transform: translateY(-3px); border-color: #d2cefd;">
+          <div style="width: 32px; height: 32px; border-radius: 8px; display: grid; place-items: center; background: #f5f4ff; color: #5d5294;"><i class="{{ r.icon }}" style="font-size: 17px;"></i></div>
+          <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 16px;">{{ r.name }}</h3>
+          <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #595d6c; text-wrap: pretty;">{{ r.blurb }}</p>
+          <div style="display: flex; flex-wrap: wrap; gap: 5.6px; margin-top: auto; padding-top: 5.6px;">
+            <sc-for list="{{ r.chips }}" as="c" hint-placeholder-count="3">
+              <span style="padding: 2.8px 8.4px; border-radius: 4px; background: #f4f5fb; border: 1px solid #e4e7f5; color: #595d6c; font-size: 10.5px; letter-spacing: 0.04em;">{{ c }}</span>
+            </sc-for>
+          </div>
+        </article>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="flujo" style="max-width: 1160px; margin: 0 auto; padding: 44px;">
+    <div style="display: flex; flex-direction: column; gap: 8.4px; margin-bottom: 28px;" data-reveal="1">
+      <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #75798c;">Cómo funciona</span>
+      <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 34px; letter-spacing: -0.02em; max-width: 17em; text-wrap: balance;">Del cobro en pesos al USDC en el wallet, sin que tú orquestes nada</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16.8px;">
+      <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+        <article data-reveal="1" style="{{ s.cardStyle }}">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 11.2px;">
+            <span style="font-family: var(--font-heading); font-size: 12px; color: #796cbf; letter-spacing: 0.14em;">{{ s.n }}</span>
+            <span style="{{ s.pillStyle }}">{{ s.pill }}</span>
+          </div>
+          <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 16px;">{{ s.title }}</h3>
+          <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #595d6c; text-wrap: pretty;">{{ s.body }}</p>
+          <code style="margin-top: auto; padding: 8.4px 11.2px; border-radius: 8px; background: #f4f5fb; border: 1px solid #e4e7f5; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; color: #4b4180; overflow-x: auto;">{{ s.code }}</code>
+        </article>
+      </sc-for>
+    </div>
+
+    <div data-reveal="1" style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16.8px; margin-top: 16.8px; align-items: stretch;">
+      <div style="display: flex; flex-direction: column; gap: 11.2px; padding: 22.4px; border-radius: 14px; background: #ffffff; border: 1px solid #eceefa; box-shadow: 0 1px 2px rgba(41,43,49,0.05), 0 14px 34px -26px rgba(41,43,49,0.45);">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 11.2px;">
+          <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 16px;">Simula una orden</h3>
+          <button onClick="{{ runSim }}" style="{{ simBtnStyle }}"><i class="{{ simIcon }}" style="font-size: 15px;"></i>{{ simLabel }}</button>
+        </div>
+        <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #595d6c;">El mismo recorrido que hace el motor cuando llega un webhook aprobado.</p>
+        <div style="height: 4px; border-radius: 999px; background: #eceefa; overflow: hidden;">
+          <div style="{{ simBarStyle }}"></div>
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 5.6px;">
+          <sc-for list="{{ simEvents }}" as="e" hint-placeholder-count="4">
+            <div style="{{ e.rowStyle }}">
+              <i class="{{ e.icon }}" style="font-size: 14px; flex-shrink: 0;"></i>
+              <code style="font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px;">{{ e.name }}</code>
+              <span style="margin-left: auto; font-size: 11px; color: #75798c;">{{ e.note }}</span>
+            </div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 14px; padding: 22.4px; border-radius: 14px; background: #ffffff; border: 1px solid #eceefa; box-shadow: 0 1px 2px rgba(41,43,49,0.05), 0 14px 34px -26px rgba(41,43,49,0.45);">
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 11.2px;">
+          <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 16px;">Cotiza con tu spread</h3>
+          <div style="display: flex; gap: 2.8px; padding: 2.8px; border-radius: 8px; background: #eceefa;">
+            <button onClick="{{ setOnramp }}" style="{{ onrampStyle }}">Onramp</button>
+            <button onClick="{{ setOfframp }}" style="{{ offrampStyle }}">Offramp</button>
+          </div>
+        </div>
+
+        <div style="display: flex; gap: 5.6px; flex-wrap: wrap;">
+          <sc-for list="{{ currencies }}" as="c" hint-placeholder-count="6">
+            <button onClick="{{ c.select }}" style="{{ c.style }}">{{ c.code }}</button>
+          </sc-for>
+        </div>
+
+        <label style="display: flex; flex-direction: column; gap: 5.6px; font-size: 12px; color: #595d6c;">
+          <span style="display: flex; justify-content: space-between;">Monto<span style="color: #292b31; font-variant-numeric: tabular-nums;">{{ amountLabel }}</span></span>
+          <input type="range" min="1" max="100" value="{{ amountPct }}" onChange="{{ onAmount }}" style="width: 100%; accent-color: #796cbf;">
+        </label>
+
+        <label style="display: flex; flex-direction: column; gap: 5.6px; font-size: 12px; color: #595d6c;">
+          <span style="display: flex; justify-content: space-between;">Tu spread<span style="color: #292b31; font-variant-numeric: tabular-nums;">{{ spreadLabel }}</span></span>
+          <input type="range" min="0" max="50" value="{{ spreadRaw }}" onChange="{{ onSpread }}" style="width: 100%; accent-color: #796cbf;">
+        </label>
+
+        <div style="margin-top: auto; display: flex; flex-direction: column; gap: 8.4px; padding: 14px; border-radius: 8px; background: #f9f8ff; border: 1px solid #e7e5fe;">
+          <div style="display: flex; justify-content: space-between; font-size: 12px; color: #595d6c;">Tasa media<span style="color: #292b31; font-variant-numeric: tabular-nums;">{{ rateLabel }}</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 12px; color: #595d6c;">Tasa efectiva<span style="color: #292b31; font-variant-numeric: tabular-nums;">{{ effLabel }}</span></div>
+          <div style="display: flex; justify-content: space-between; align-items: baseline; padding-top: 5.6px; border-top: 1px solid #e7e5fe;">
+            <span style="font-size: 12px; color: #595d6c;">{{ resultLabel }}</span>
+            <span style="font-family: var(--font-heading); font-size: 22px; letter-spacing: -0.02em; font-variant-numeric: tabular-nums;">{{ resultValue }}</span>
+          </div>
+        </div>
+        <span style="font-size: 11px; color: #75798c;">Tasas de referencia, ilustrativas. En producción salen de CoinGecko al momento del cobro.</span>
+      </div>
+    </div>
+
+    <div style="display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 44px; align-items: start; margin-top: 62px;" data-reveal="1">
+      <div style="display: flex; flex-direction: column; gap: 11.2px;">
+        <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #75798c;">Seguridad</span>
+        <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 30px; letter-spacing: -0.02em;">Nada se libera con la palabra del webhook</h2>
+        <p style="margin: 0; font-size: 14px; line-height: 1.65; color: #595d6c; text-wrap: pretty;">La biblioteca nunca toca llaves privadas y nunca lee tu entorno por su cuenta: cada credencial es un parámetro explícito del constructor.</p>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 11.2px;">
+        <sc-for list="{{ safety }}" as="s" hint-placeholder-count="4">
+          <div style="display: flex; align-items: flex-start; gap: 11.2px; padding: 16.8px; border-radius: 14px; background: #ffffff; border: 1px solid #eceefa; box-shadow: 0 1px 2px rgba(41,43,49,0.05), 0 10px 26px -24px rgba(41,43,49,0.45);">
+            <i class="ph ph-shield-check" style="font-size: 17px; color: #796cbf; flex-shrink: 0;"></i>
+            <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #3f424d; text-wrap: pretty;">{{ s }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="precios" style="max-width: 1160px; margin: 0 auto; padding: 44px;">
+    <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 22.4px; margin-bottom: 28px;" data-reveal="1">
+      <div style="display: flex; flex-direction: column; gap: 8.4px;">
+        <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #75798c;">Precios</span>
+        <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 34px; letter-spacing: -0.02em;">La biblioteca es libre; el volumen se conversa</h2>
+      </div>
+      <div style="display: flex; gap: 2.8px; padding: 2.8px; border-radius: 8px; background: #eceefa;">
+        <button onClick="{{ setMonthly }}" style="{{ monthlyStyle }}">Mensual</button>
+        <button onClick="{{ setAnnual }}" style="{{ annualStyle }}">Anual</button>
+      </div>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16.8px; align-items: stretch;">
+      <sc-for list="{{ plans }}" as="p" hint-placeholder-count="3">
+        <article data-reveal="1" style="{{ p.cardStyle }}">
+          <div style="display: flex; align-items: center; justify-content: space-between; gap: 11.2px;">
+            <h3 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 17px;">{{ p.name }}</h3>
+            <span style="{{ p.tagStyle }}">{{ p.tag }}</span>
+          </div>
+          <div style="display: flex; align-items: baseline; gap: 5.6px;">
+            <span style="font-family: var(--font-heading); font-size: 32px; letter-spacing: -0.02em;">{{ p.price }}</span>
+            <span style="font-size: 12.5px; color: #75798c;">{{ p.unit }}</span>
+          </div>
+          <p style="margin: 0; font-size: 13px; line-height: 1.6; color: #595d6c; text-wrap: pretty;">{{ p.body }}</p>
+          <div style="display: flex; flex-direction: column; gap: 8.4px; padding-top: 5.6px;">
+            <sc-for list="{{ p.features }}" as="f" hint-placeholder-count="4">
+              <div style="display: flex; align-items: flex-start; gap: 8.4px; font-size: 12.5px; color: #3f424d; line-height: 1.5;">
+                <i class="ph ph-check" style="font-size: 14px; color: #796cbf; flex-shrink: 0; margin-top: 2px;"></i>{{ f }}
+              </div>
+            </sc-for>
+          </div>
+          <a href="NOAPAY%20Console.dc.html" style="{{ p.ctaStyle }}">{{ p.cta }}</a>
+        </article>
+      </sc-for>
+    </div>
+    <p style="margin: 16.8px 0 0; font-size: 11.5px; color: #75798c;">Las cifras de volumen son un marcador de posición hasta que definas la tarifa comercial.</p>
+  </section>
+
+  <section id="faq" style="max-width: 1160px; margin: 0 auto; padding: 44px;">
+    <div style="display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 44px; align-items: start;">
+      <div style="display: flex; flex-direction: column; gap: 8.4px;" data-reveal="1">
+        <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #75798c;">Preguntas</span>
+        <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 34px; letter-spacing: -0.02em;">Lo que suelen preguntar antes de integrar</h2>
+      </div>
+      <div style="display: flex; flex-direction: column; gap: 8.4px;" data-reveal="1">
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+          <div style="border-radius: 14px; background: #ffffff; border: 1px solid #eceefa; box-shadow: 0 1px 2px rgba(41,43,49,0.04); overflow: hidden;">
+            <button onClick="{{ f.toggle }}" style="display: flex; align-items: center; justify-content: space-between; gap: 16.8px; width: 100%; padding: 16.8px 22.4px; background: transparent; border: 0; cursor: pointer; text-align: left; font-family: var(--font-body); font-size: 14px; color: #292b31; transition: color 160ms ease;" style-hover="color: #5d5294;">
+              {{ f.q }}<i class="{{ f.icon }}" style="font-size: 16px; color: #796cbf; flex-shrink: 0;"></i>
+            </button>
+            <div style="{{ f.panelStyle }}">
+              <div style="min-height: 0; overflow: hidden;">
+                <p style="margin: 0; padding: 0 22.4px 16.8px; font-size: 13px; line-height: 1.65; color: #595d6c; text-wrap: pretty;">{{ f.a }}</p>
+              </div>
+            </div>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="max-width: 1160px; margin: 0 auto 62px; padding: 0 44px;">
+    <div data-reveal="1" style="position: relative; padding: 56px 44px; border-radius: 14px; background: radial-gradient(110% 140% at 80% 10%, #2b2741 0%, #1d1f2f 45%, #161826 100%); color: var(--color-text); display: flex; align-items: center; justify-content: space-between; gap: 44px; flex-wrap: wrap; overflow: hidden; box-shadow: 0 30px 60px -40px rgba(41,43,49,0.7);">
+      <div style="display: flex; flex-direction: column; gap: 11.2px; max-width: 32em;">
+        <h2 style="margin: 0; font-family: var(--font-heading); font-weight: 500; font-size: 32px; letter-spacing: -0.02em; text-wrap: balance;">Instala una vez, activa los rails cuando los necesites</h2>
+        <p style="margin: 0; font-size: 13.5px; line-height: 1.65; color: var(--color-neutral-400);">Cada servicio que contratas queda disponible desde el mismo cliente, sin cambiar una línea del código que ya escribiste.</p>
+      </div>
+      <div style="display: flex; align-items: center; gap: 11.2px; flex-wrap: wrap;">
+        <button onClick="{{ copyInstall }}" style="display: inline-flex; align-items: center; gap: 8.4px; padding: 13px 16.8px; border-radius: 8px; border: 1px solid var(--color-neutral-800); background: transparent; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; color: var(--color-accent-200); cursor: pointer; transition: border-color 180ms ease;" style-hover="border-color: var(--color-accent);">
+          npm install noa-pay<i class="{{ copyIcon }}" style="font-size: 15px; color: var(--color-neutral-500);"></i>
+        </button>
+        <a href="NOAPAY%20Console.dc.html" style="display: inline-flex; align-items: center; gap: 5.6px; padding: 13px 22.4px; border-radius: 8px; border: 1px solid var(--color-accent); color: var(--color-accent-200); font-size: 14px; transition: background 180ms ease, transform 180ms ease;" style-hover="background: var(--color-accent-900); transform: translateY(-1px);">
+          Abrir la consola<i class="ph ph-arrow-up-right" style="font-size: 15px;"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="border-top: 1px solid #e4e7f5;">
+    <div style="max-width: 1160px; margin: 0 auto; padding: 22.4px 44px; display: flex; align-items: center; justify-content: space-between; gap: 22.4px; flex-wrap: wrap; font-size: 12px; color: #75798c;">
+      <span>NOAPAY · noa-pay · MIT</span>
+      <div style="display: flex; gap: 22.4px;">
+        <a href="#casos" style="color: #75798c;" style-hover="color: #292b31;">Casos de uso</a>
+        <a href="#precios" style="color: #75798c;" style-hover="color: #292b31;">Precios</a>
+        <a href="#faq" style="color: #75798c;" style-hover="color: #292b31;">Preguntas</a>
+        <a href="NOAPAY%20Console.dc.html" style="color: #75798c;" style-hover="color: #292b31;">Consola</a>
+      </div>
+    </div>
+  </footer>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200}}">
+class Component extends DCLogic {
+  state = {
+    billing: "monthly", openFaq: 0, snippet: "mercadopago",
+    simStep: 0, simRunning: false, copied: false,
+    ramp: "onramp", currency: "ARS", amountPct: 45, spreadRaw: 20
+  };
+
+  runSim = () => {
+    if (this.state.simRunning) return;
+    if (this._timers) this._timers.forEach(clearTimeout);
+    this._timers = [];
+    this.setState({ simRunning: true, simStep: 1 });
+    [2, 3, 4].forEach((step, i) => {
+      this._timers.push(setTimeout(() => {
+        this.setState({ simStep: step, simRunning: step < 4 });
+      }, 900 * (i + 1)));
+    });
+  };
+
+  copyInstall = () => {
+    const text = "npm install noa-pay";
+    const done = () => {
+      this.setState({ copied: true });
+      setTimeout(() => this.setState({ copied: false }), 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(done, done);
+    } else { done(); }
+  };
+
+  componentDidMount() {
+    if (typeof IntersectionObserver === "undefined") return;
+    const nodes = Array.from(this.el ? this.el.querySelectorAll("[data-reveal]") : document.querySelectorAll("[data-reveal]"));
+    if (!nodes.length) return;
+    const reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    if (reduce) return;
+    nodes.forEach((n) => {
+      n.style.opacity = "0";
+      n.style.transform = "translateY(18px)";
+      n.style.transition = "opacity 620ms cubic-bezier(0.22,0.61,0.36,1), transform 620ms cubic-bezier(0.22,0.61,0.36,1)";
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        const delay = Math.min(i, 4) * 70;
+        setTimeout(() => { el.style.opacity = "1"; el.style.transform = "none"; }, delay);
+        io.unobserve(el);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    nodes.forEach((n) => io.observe(n));
+    this._io = io;
+  }
+
+  componentWillUnmount() { if (this._io) this._io.disconnect(); }
+
+  seg(active) {
+    return {
+      padding: "5.6px 14px", borderRadius: "8px", border: 0, cursor: "pointer",
+      fontFamily: "var(--font-body)", fontSize: "12px",
+      background: active ? "#ffffff" : "transparent",
+      color: active ? "#292b31" : "#75798c",
+      boxShadow: active ? "0 1px 2px rgba(41,43,49,0.12)" : "none",
+      transition: "background 160ms ease, color 160ms ease"
+    };
+  }
+
+  renderVals() {
+    const annual = this.state.billing === "annual";
+    const open = this.state.openFaq;
+    const st = this.state;
+
+    const SNIPPETS = [
+      { id: "mercadopago", label: "Mercado Pago", file: "payment-link.ts" },
+      { id: "etherfuse", label: "Etherfuse", file: "quickstart.ts" },
+      { id: "koywe", label: "Koywe", file: "full-flow.ts" },
+      { id: "sep", label: "SEP-24", file: "sep/full-flow.ts" }
+    ];
+
+    const RATES = { ARS: 1020, BRL: 5.45, MXN: 20.25, CLP: 937, COP: 4180, PEN: 3.72 };
+    const MAX = { ARS: 2000000, BRL: 50000, MXN: 200000, CLP: 9000000, COP: 40000000, PEN: 35000 };
+    const onramp = st.ramp === "onramp";
+    const rate = RATES[st.currency];
+    const spread = st.spreadRaw / 1000;
+    const eff = onramp ? rate * (1 + spread) : rate * (1 - spread);
+    const fiat = Math.round((MAX[st.currency] * st.amountPct) / 100);
+    const cryptoIn = 500 * (st.amountPct / 100);
+    const num = (n, d) => n.toLocaleString("es-MX", { minimumFractionDigits: d, maximumFractionDigits: d });
+
+    const SIM = [
+      { name: "order.created", note: "cotización congelada" },
+      { name: "payment.approved", note: "firma verificada" },
+      { name: "settlement.released", note: "USDC enviado" },
+      { name: "order.completed", note: "cerrada" }
+    ];
+
+    const FAQ = [
+      { q: "¿Puedo probar PIX en sandbox?", a: "No. Mercado Pago solo concede el alcance de la API de pagos que PIX necesita a cuentas reales de producción, así que una cuenta de prueba devuelve 401. Para ejercitar el rail de BRL en sandbox se usa createPaymentLink." },
+      { q: "¿La biblioteca lee mi archivo .env?", a: "Nunca. Cada credencial y ajuste es un parámetro del constructor; de dónde sale ese valor (una variable de entorno, un gestor de secretos, tu propio módulo de configuración) lo decides tú." },
+      { q: "¿Quién custodia las llaves privadas?", a: "Tú. La biblioteca no toca llaves: tu función de settlement y tu firmante mueven los fondos, y en SEP-10 tú firmas el challenge." },
+      { q: "¿Qué pasa si el pago no coincide con la cotización?", a: "La orden no se liquida. El monto pagado debe coincidir con el cotizado dentro de la tolerancia que definas, y el webhook duplicado es idempotente." },
+      { q: "¿Puedo conectar un proveedor que no está en la lista?", a: "Sí, con createCustomProvider: envuelves cualquier API de pagos y obtienes links, QR, normalización de estados y webhooks con el mismo comportamiento que los proveedores incluidos." },
+      { q: "¿Qué SEPs están implementados?", a: "SEP-1, SEP-10 y SEP-24: descubrimiento del anchor, autenticación y el flujo alojado de depósito y retiro. SEP-6, 12, 31 y 38 todavía no." }
+    ];
+
+    return {
+      cases: [
+        { icon: "ph ph-paper-plane-tilt", title: "Remesas y envíos", body: "El remitente paga en su moneda local por link o PIX; el receptor recibe USDC en su wallet en cuanto el pago se confirma.", meta: "Onramp · Mercado Pago + settlement" },
+        { icon: "ph ph-storefront", title: "Checkout que liquida en stablecoin", body: "Cobras en pesos, reales o soles y tu tesorería queda en USDC, con la tasa y tu spread congelados al momento del cobro.", meta: "Onramp · CoinGecko + spread" },
+        { icon: "ph ph-bank", title: "Pagos a proveedores y retiros", body: "El usuario envía USDC y el motor dispara el pago en fiat a la cuenta registrada, o te avisa para que lo hagas a tu manera.", meta: "Offramp · Koywe / Mercado Pago" }
+      ],
+      rails: [
+        { name: "Mercado Pago", icon: "ph ph-link-simple", blurb: "Links de Checkout Pro y cobros PIX, una cuenta por país y verificación de webhook incluida.", chips: ["AR", "BR", "MX", "CL", "CO", "PE", "UY"] },
+        { name: "Etherfuse", icon: "ph ph-arrows-left-right", blurb: "BRL·PIX y MXN·SPEI contra Solana, Stellar, Base, Polygon y Monad, con la pata cripto resuelta.", chips: ["PIX", "SPEI", "5 redes"] },
+        { name: "Koywe", icon: "ph ph-swap", blurb: "ARS, CLP, MXN, COP, PEN y BRL contra USDC en Stellar, con KYC delegado y cuentas bancarias.", chips: ["6 monedas", "USDC", "Stellar"] },
+        { name: "Anchors SEP", icon: "ph ph-anchor", blurb: "SEP-1, SEP-10 y SEP-24 contra cualquier anchor compatible: descubrimiento, auth y flujo alojado.", chips: ["SEP-1", "SEP-10", "SEP-24"] }
+      ],
+      steps: [
+        { n: "01", title: "Arma el cobro", body: "La tasa media de CoinGecko y tu spread quedan congelados en el momento en que se crea la orden.", code: "noa.ramp.onramp({ spread: 0.02 })" },
+        { n: "02", title: "Recibe el webhook", body: "El motor valida la firma, vuelve a consultar el pago en la API del proveedor y compara el monto pagado.", code: "noa.ramp.handleWebhook(...)" },
+        { n: "03", title: "Libera el activo", body: "Tu función de settlement mueve el USDC al wallet del usuario y la orden se cierra, una sola vez.", code: "noa.ramp.on('settlement:released')" }
+      ].map((s, i) => {
+        const done = st.simStep > i + 1;
+        const active = st.simStep === i + 1;
+        return {
+          n: s.n, title: s.title, body: s.body, code: s.code,
+          pill: done ? "Listo" : active ? "En curso" : "En espera",
+          pillStyle: {
+            padding: "2.8px 8.4px", borderRadius: "999px", fontSize: "10.5px",
+            background: done ? "#f5f4ff" : active ? "#efedff" : "#f4f5fb",
+            border: "1px solid " + (done || active ? "#d2cefd" : "#e4e7f5"),
+            color: done || active ? "#5d5294" : "#9397ab",
+            transition: "background 240ms ease, color 240ms ease, border-color 240ms ease"
+          },
+          cardStyle: {
+            display: "flex", flexDirection: "column", gap: "11.2px", padding: "22.4px",
+            borderRadius: "14px", background: "#ffffff",
+            border: "1px solid " + (active ? "#b5abfc" : "#eceefa"),
+            boxShadow: active
+              ? "0 1px 2px rgba(41,43,49,0.05), 0 22px 44px -28px rgba(93,82,148,0.6)"
+              : "0 1px 2px rgba(41,43,49,0.05), 0 14px 34px -26px rgba(41,43,49,0.45)",
+            transform: active ? "translateY(-3px)" : "none",
+            transition: "transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease"
+          }
+        };
+      }),
+
+      snippetTabs: SNIPPETS.map((s) => ({
+        label: s.label,
+        select: () => this.setState({ snippet: s.id }),
+        style: {
+          padding: "5.6px 11.2px", borderRadius: "8px", border: 0, cursor: "pointer",
+          fontFamily: "var(--font-body)", fontSize: "11.5px",
+          background: st.snippet === s.id ? "#2b2741" : "transparent",
+          color: st.snippet === s.id ? "#d2cefd" : "#75798c",
+          transition: "background 160ms ease, color 160ms ease"
+        }
+      })),
+      snippetFile: (SNIPPETS.find((s) => s.id === st.snippet) || SNIPPETS[0]).file,
+      isMercadoPago: st.snippet === "mercadopago",
+      isEtherfuse: st.snippet === "etherfuse",
+      isKoywe: st.snippet === "koywe",
+      isSep: st.snippet === "sep",
+
+      runSim: this.runSim,
+      simLabel: st.simStep === 0 ? "Simular pago" : st.simStep >= 4 ? "Repetir" : "Corriendo",
+      simIcon: st.simStep >= 4 ? "ph ph-arrow-counter-clockwise" : "ph ph-play",
+      simBtnStyle: {
+        display: "inline-flex", alignItems: "center", gap: "5.6px", padding: "8.4px 14px",
+        borderRadius: "8px", background: "transparent", border: "1px solid #b5abfc",
+        color: "#4b4180", fontFamily: "var(--font-body)", fontSize: "12px",
+        cursor: st.simRunning ? "default" : "pointer", opacity: st.simRunning ? 0.6 : 1,
+        transition: "opacity 180ms ease"
+      },
+      simBarStyle: {
+        height: "100%", width: (st.simStep / 4) * 100 + "%",
+        background: "linear-gradient(90deg, #b5abfc, #796cbf)",
+        transition: "width 700ms cubic-bezier(0.22,0.61,0.36,1)"
+      },
+      simEvents: SIM.map((e, i) => {
+        const on = st.simStep > i;
+        return {
+          name: e.name, note: on ? e.note : "",
+          icon: on ? "ph ph-check-circle" : "ph ph-circle-dashed",
+          rowStyle: {
+            display: "flex", alignItems: "center", gap: "8.4px", padding: "8.4px 11.2px",
+            borderRadius: "8px", background: on ? "#f9f8ff" : "#f4f5fb",
+            border: "1px solid " + (on ? "#e7e5fe" : "#eceefa"),
+            color: on ? "#4b4180" : "#9397ab",
+            transform: on ? "none" : "translateX(-4px)",
+            opacity: on ? 1 : 0.7,
+            transition: "background 260ms ease, color 260ms ease, transform 260ms ease, opacity 260ms ease"
+          }
+        };
+      }),
+
+      currencies: Object.keys(RATES).map((code) => ({
+        code,
+        select: () => this.setState({ currency: code }),
+        style: {
+          padding: "5.6px 11.2px", borderRadius: "999px", cursor: "pointer",
+          fontFamily: "var(--font-body)", fontSize: "11.5px",
+          background: st.currency === code ? "#f5f4ff" : "transparent",
+          border: "1px solid " + (st.currency === code ? "#b5abfc" : "#e4e7f5"),
+          color: st.currency === code ? "#4b4180" : "#75798c",
+          transition: "background 160ms ease, border-color 160ms ease, color 160ms ease"
+        }
+      })),
+      onrampStyle: this.seg(onramp),
+      offrampStyle: this.seg(!onramp),
+      setOnramp: () => this.setState({ ramp: "onramp" }),
+      setOfframp: () => this.setState({ ramp: "offramp" }),
+      amountPct: st.amountPct,
+      spreadRaw: st.spreadRaw,
+      onAmount: (e) => this.setState({ amountPct: Number(e.target.value) }),
+      onSpread: (e) => this.setState({ spreadRaw: Number(e.target.value) }),
+      amountLabel: onramp ? num(fiat, 0) + " " + st.currency : num(cryptoIn, 2) + " USDC",
+      spreadLabel: num(spread * 100, 1) + " %",
+      rateLabel: num(rate, 2) + " " + st.currency,
+      effLabel: num(eff, 2) + " " + st.currency,
+      resultLabel: onramp ? "El usuario recibe" : "El usuario recibe",
+      resultValue: onramp ? num(fiat / eff, 2) + " USDC" : num(cryptoIn * eff, 2) + " " + st.currency,
+
+      copyInstall: this.copyInstall,
+      copyIcon: st.copied ? "ph ph-check" : "ph ph-copy",
+      safety: [
+        "El cuerpo del webhook nunca se cree: el pago se vuelve a consultar en la API del proveedor antes de liquidar.",
+        "El monto pagado debe coincidir con el cotizado, dentro de la tolerancia que definas.",
+        "Los webhooks duplicados son idempotentes: una orden se liquida una sola vez.",
+        "Si tu settlement falla, la orden queda en settling y la reintentas con retrySettlement."
+      ],
+
+      monthlyStyle: this.seg(!annual),
+      annualStyle: this.seg(annual),
+      setMonthly: () => this.setState({ billing: "monthly" }),
+      setAnnual: () => this.setState({ billing: "annual" }),
+
+      plans: [
+        { name: "Sandbox", tag: "Gratis", price: "$0", unit: "siempre", featured: false,
+          body: "La biblioteca completa contra cuentas de prueba, con el simulador local para el flujo de liquidación.",
+          features: ["Todos los rails en sandbox", "Simulador de webhooks firmados", "Órdenes en memoria", "Soporte por la comunidad"],
+          cta: "Empezar en sandbox" },
+        { name: "Producción", tag: "Popular", price: annual ? "0,7%" : "0,9%", unit: "por volumen liquidado", featured: true,
+          body: "Cuentas reales por país, liquidación automática y webhooks firmados hacia tus endpoints.",
+          features: ["Rails de producción por país", "Liquidación automática y reintentos", "Webhooks firmados salientes", "Persistencia con tu propio store"],
+          cta: "Contratar rails" },
+        { name: "Enterprise", tag: "A medida", price: "Hablemos", unit: "según volumen", featured: false,
+          body: "Proveedores propios, anchors SEP dedicados y acuerdos de nivel de servicio.",
+          features: ["Proveedores propios integrados", "Anchors SEP dedicados", "Revisión de arquitectura", "Acuerdo de nivel de servicio"],
+          cta: "Hablar con el equipo" }
+      ].map((p) => ({
+        name: p.name, tag: p.tag, price: p.price, unit: p.unit, body: p.body, features: p.features, cta: p.cta,
+        cardStyle: {
+          display: "flex", flexDirection: "column", gap: "14px", padding: "28px", borderRadius: "14px",
+          background: "#ffffff",
+          border: "1px solid " + (p.featured ? "#b5abfc" : "#eceefa"),
+          boxShadow: p.featured
+            ? "0 1px 2px rgba(41,43,49,0.05), 0 26px 56px -30px rgba(93,82,148,0.55)"
+            : "0 1px 2px rgba(41,43,49,0.05), 0 14px 34px -26px rgba(41,43,49,0.45)"
+        },
+        tagStyle: {
+          padding: "2.8px 8.4px", borderRadius: "999px", fontSize: "10.5px", letterSpacing: "0.04em",
+          background: p.featured ? "#f5f4ff" : "#f4f5fb",
+          border: "1px solid " + (p.featured ? "#d2cefd" : "#e4e7f5"),
+          color: p.featured ? "#5d5294" : "#75798c"
+        },
+        ctaStyle: {
+          marginTop: "auto", display: "inline-flex", alignItems: "center", justifyContent: "center",
+          padding: "11.2px 16.8px", borderRadius: "8px", fontSize: "13px",
+          border: "1px solid " + (p.featured ? "var(--color-accent)" : "#cfd3e5"),
+          color: p.featured ? "#4b4180" : "#292b31",
+          background: p.featured ? "#f9f8ff" : "transparent",
+          transition: "transform 180ms ease, border-color 180ms ease"
+        }
+      })),
+
+      faqs: FAQ.map((f, i) => ({
+        q: f.q, a: f.a,
+        icon: open === i ? "ph ph-minus" : "ph ph-plus",
+        toggle: () => this.setState({ openFaq: open === i ? -1 : i }),
+        panelStyle: {
+          display: "grid",
+          gridTemplateRows: open === i ? "1fr" : "0fr",
+          opacity: open === i ? 1 : 0,
+          transition: "grid-template-rows 320ms cubic-bezier(0.22,0.61,0.36,1), opacity 240ms ease",
+          overflow: "hidden"
+        }
+      }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>
