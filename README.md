@@ -1,36 +1,28 @@
 # NOAPAY-DASHBOARD
 
-**NOAPAY (NoaInnova)** es una plataforma fintech de orquestación de pagos que ofrece un cliente API unificado (`NoaClient`) para onramp y offramp de dinero fiat en Latinoamérica, con liquidación en cripto.
+**NOAPAY (NoaInnova)** es una plataforma fintech de orquestación de pagos que unifica onramp y offramp fiat en Latinoamérica con liquidación en cripto.
 
-## ¿Qué hace?
+## Deploy
 
-Un solo cliente para todos los rieles de pago de la región. En lugar de integrar múltiples SDKs (Mercado Pago, PIX, SPEI, anchors Stellar, wallets cripto), se usa una sola API REST que abstrae todo.
+[https://noapay-landing-5db84bfb-46f9-4c8c-b.vercel.app/](https://noapay-landing-5db84bfb-46f9-4c8c-b.vercel.app/)
 
-```
-import { NoaClient, FiatCurrency } from "noa-pay";
-```
-
-### Rieles soportados
+## Rieles soportados
 
 - **Fiat:** Mercado Pago, PIX, SPEI, transferencias bancarias
-- **Cripto:** Liquidación automática con stablecoins, anchors SEP en Stellar, pricing vía CoinGecko con spread personalizado
-- **Sin dependencias de SDK:** Todo funciona con REST y `fetch`
+- **Cripto:** Stablecoins, anchors SEP en Stellar, pricing vía CoinGecko
 
 ## Estructura del proyecto
 
-| Pantalla | Propósito |
-|----------|-----------|
-| **Landing** | Página de producto — explica la plataforma, muestra ejemplos de código, lista los rieles soportados |
-| **Dashboard** | Vista de transacciones — balance, historial con búsqueda y filtros por método (SPEI, tarjeta, débito directo, efectivo), rango de fechas, exportación |
-| **Console** | Panel de administración/desarrollo — catálogo de servicios, toggle Sandbox/Producción, API keys, webhooks, documentación, monitoreo por riel |
+| Pantalla | Estado | Archivo |
+|----------|--------|---------|
+| **Landing** | Listo | `Dashboard similar/NOAPAY Landing v3.dc.html` |
+
+Próximamente: Dashboard de transacciones y Console de administración.
 
 ## Diseño
 
-Todas las pantallas siguen el sistema de diseño **Nocturne**: interfaz oscura, tipografía Inter, acento blurple (`#9184d9`), iconos Phosphor. UI completamente en español.
+Sistema de diseño **Nocturne**: interfaz oscura, tipografía Inter, acento blurple (`#9184d9`), iconos Phosphor. UI en español.
 
-## Paquete npm
+## Licencia
 
-- **Nombre:** `noa-pay`
-- **Formato:** ESM + CJS, tipos TypeScript incluidos
-- **Licencia:** MIT
-- **Runtime:** Node >= 18
+MIT
