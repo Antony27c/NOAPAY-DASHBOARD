@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/nocturne-49063f70-b521-437d-9b6b-66d6d694a5d1/styles.css">
+<script src="_ds/nocturne-49063f70-b521-437d-9b6b-66d6d694a5d1/_ds_bundle.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap">
+<link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css">
+<style>
+  html { scroll-behavior: smooth; }
+  body { margin: 0; font-family: "Poppins", system-ui, sans-serif; }
+  a { color: #18181b; text-decoration: none; }
+  a:hover { color: #000000; }
+  :focus-visible { outline: 2px solid #71717a; outline-offset: 2px; }
+  ::selection { background: #d4d4d8; color: #18181b; }
+</style>
+</helmet>
+
+<div style="{{ themeVars }}">
+  <div style="background: var(--pg-bg); color: var(--pg-text); font-family: 'Poppins', system-ui, sans-serif; font-size: 14px; transition: background 260ms ease, color 260ms ease; min-height: 100vh;">
+
+    <header style="max-width: 1080px; margin: 0 auto; padding: clamp(18px, 3vw, 28px) clamp(20px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
+      <div style="display: flex; align-items: center; font-weight: 600; letter-spacing: 0.08em; font-size: 18px; line-height: 1; transition: opacity 160ms ease;" style-hover="opacity: 0.75;">
+        <span>N</span>
+        <img src="{{ markSrc }}" alt="O" style="width: 15px; height: 15px; margin: 0 0.05em; display: block;">
+        <span>APAY</span>
+      </div>
+      <nav style="display: flex; align-items: center; gap: clamp(14px, 2.4vw, 24px); font-size: 13px; flex-wrap: wrap;">
+        <a href="#precios" data-navlink="precios" style="color: var(--pg-muted); padding-bottom: 2px; border-bottom: 1px solid transparent; transition: color 160ms ease, border-color 160ms ease;" style-hover="color: var(--pg-text); border-color: var(--pg-accent);">Precios</a>
+        <a href="#rails" data-navlink="rails" style="color: var(--pg-muted); padding-bottom: 2px; border-bottom: 1px solid transparent; transition: color 160ms ease, border-color 160ms ease;" style-hover="color: var(--pg-text); border-color: var(--pg-accent);">Rails</a>
+        <a href="#flujo" data-navlink="flujo" style="color: var(--pg-muted); padding-bottom: 2px; border-bottom: 1px solid transparent; transition: color 160ms ease, border-color 160ms ease;" style-hover="color: var(--pg-text); border-color: var(--pg-accent);">Cómo funciona</a>
+        
+      </nav>
+      <div style="display: flex; align-items: center; gap: 10px;">
+        <button onClick="{{ toggleTheme }}" title="{{ themeTitle }}" style="display: grid; place-items: center; width: 34px; height: 34px; border-radius: 999px; background: transparent; border: 1px solid var(--pg-border); color: var(--pg-muted); cursor: pointer; transition: border-color 180ms ease, color 180ms ease;" style-hover="border-color: var(--pg-accent); color: var(--pg-accent);">
+          <i class="{{ themeIcon }}" style="font-size: 16px;"></i>
+        </button>
+        <a href="#contacto" style="display: inline-flex; align-items: center; gap: 6px; padding: 9px 16px; border-radius: 8px; border: 1px solid var(--pg-accent); color: var(--pg-accent-text); font-size: 13px; transition: background 180ms ease;" style-hover="background: var(--pg-accent-soft);">
+          Hablar con el equipo<i class="ph ph-arrow-right" style="font-size: 14px;"></i>
+        </a>
+      </div>
+    </header>
+
+    <section style="max-width: 1080px; margin: 0 auto; padding: clamp(32px, 5vw, 56px) clamp(20px, 4vw, 40px) clamp(40px, 6vw, 64px); display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: clamp(28px, 4vw, 48px); align-items: center;">
+      <div style="display: flex; flex-direction: column; align-items: flex-start; gap: 22px;" data-reveal="1">
+        <h1 style="margin: 0; font-weight: 500; font-size: clamp(32px, 5.2vw, 52px); line-height: 1.08; letter-spacing: -0.03em; text-wrap: balance;">Un solo cliente para todos los rails de la región</h1>
+        <p style="margin: 0; max-width: 30em; font-size: 15px; line-height: 1.7; color: var(--pg-muted); text-wrap: pretty;">Onramp y offramp para Latinoamérica: Mercado Pago, PIX y SPEI con liberación automática de stablecoins, anchors SEP en Stellar y precio de CoinGecko con tu propio spread.</p>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+          <a href="#contacto" style="display: inline-flex; align-items: center; gap: 6px; padding: 13px 22px; border-radius: 8px; border: 1px solid var(--pg-accent); color: var(--pg-accent-text); font-size: 14px; transition: background 180ms ease, transform 180ms ease;" style-hover="background: var(--pg-accent-soft); transform: translateY(-1px);">
+            Solicitar acceso
+          </a>
+          <button onClick="{{ copyInstall }}" style="display: inline-flex; align-items: center; gap: 10px; padding: 13px 18px; border-radius: 8px; border: 1px solid var(--pg-border); background: transparent; color: var(--pg-muted); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px; cursor: pointer; transition: border-color 180ms ease;" style-hover="border-color: var(--pg-accent);">
+            npm install noa-pay<i class="{{ copyIcon }}" style="font-size: 15px;"></i>
+          </button>
+        </div>
+      </div>
+
+      <div style="border-radius: 14px; background: #18181b; box-shadow: 0 0 0 1px #3f3f46, 0 2px 6px rgba(0,0,0,0.25), 0 40px 70px -38px rgba(0,0,0,0.75);" data-reveal="1">
+        <div style="display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid #2a2a2e;">
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: #46464d;"></span>
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: #46464d;"></span>
+          <span style="width: 8px; height: 8px; border-radius: 999px; background: #46464d;"></span>
+          <span style="margin-left: 4px; font-size: 11.5px; color: #8a8a92;">quickstart.ts</span>
+        </div>
+        <pre style="margin: 0; padding: 22px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.9; color: #d4d4d8; overflow-x: auto;"><span style="color: #83838c;">import</span> { NoaClient, FiatCurrency } <span style="color: #83838c;">from</span> <span style="color: #f4f4f5;">"noa-pay"</span>;
+
+<span style="color: #83838c;">const</span> noa = <span style="color: #83838c;">new</span> <span style="color: #ffffff;">NoaClient</span>({
+  mercadopago: { accessToken, sandbox: <span style="color: #f4f4f5;">true</span> },
+  settlement: <span style="color: #83838c;">async</span> ({ wallet, amount, asset }) =&gt;
+    ({ txId: <span style="color: #83838c;">await</span> myWallet.<span style="color: #ffffff;">transfer</span>(asset, amount, wallet) }),
+});
+
+<span style="color: #83838c;">const</span> charge = <span style="color: #83838c;">await</span> noa.<span style="color: #ffffff;">createPaymentLink</span>({
+  amount: <span style="color: #f4f4f5;">5000</span>,
+  currency: FiatCurrency.ARS,
+  reference: <span style="color: #f4f4f5;">"order-1"</span>,
+});</pre>
+      </div>
+    </section>
+
+    
+
+    <section id="precios" style="max-width: 1080px; margin: 0 auto; padding: clamp(24px, 4vw, 40px); scroll-margin-top: 24px;">
+      <h2 style="margin: 0 0 28px; font-weight: 500; font-size: clamp(23px, 3.2vw, 30px); letter-spacing: -0.02em;" data-reveal="1">La biblioteca es libre; el volumen se conversa</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; align-items: stretch;">
+        <sc-for list="{{ plans }}" as="p" hint-placeholder-count="3">
+          <article data-reveal="1" style="{{ p.cardStyle }}" style-hover="transform: translateY(-3px); box-shadow: 0 18px 40px -30px rgba(20,18,40,0.6);">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <h3 style="margin: 0; font-weight: 500; font-size: 16px;">{{ p.name }}</h3>
+              <span style="{{ p.tagStyle }}">{{ p.tag }}</span>
+            </div>
+            <div style="display: flex; align-items: baseline; gap: 6px;">
+              <span style="font-size: clamp(25px, 3.2vw, 30px); font-weight: 500; letter-spacing: -0.03em;">{{ p.price }}</span>
+              <span style="font-size: 12px; color: var(--pg-faint);">{{ p.unit }}</span>
+            </div>
+            <p style="margin: 0; font-size: 13px; line-height: 1.65; color: var(--pg-muted); text-wrap: pretty;">{{ p.body }}</p>
+            <a href="#contacto" style="{{ p.ctaStyle }}">{{ p.cta }}</a>
+          </article>
+        </sc-for>
+      </div>
+      <p style="margin: 16px 0 0; font-size: 11.5px; color: var(--pg-faint);">Las cifras de volumen son un marcador de posición hasta que definas la tarifa comercial.</p>
+    </section><section id="rails" style="max-width: 1080px; margin: 0 auto; padding: clamp(48px, 7vw, 72px) clamp(20px, 4vw, 40px) clamp(24px, 4vw, 40px); scroll-margin-top: 24px;">
+      <h2 style="margin: 0 0 28px; font-weight: 500; font-size: clamp(23px, 3.2vw, 30px); letter-spacing: -0.02em; max-width: 16em; text-wrap: balance;" data-reveal="1">Fiat regional y cripto en el mismo objeto de configuración</h2>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 16px;">
+        <sc-for list="{{ rails }}" as="r" hint-placeholder-count="4">
+          <article data-reveal="1" style="display: flex; flex-direction: column; gap: 10px; padding: 22px; border-radius: 14px; background: var(--pg-surface); border: 1px solid var(--pg-border); box-shadow: 0 1px 2px rgba(0,0,0,0.06), 0 10px 24px -18px rgba(0,0,0,0.45); transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;" style-hover="transform: translateY(-3px); border-color: var(--pg-accent); background: var(--pg-accent-soft); box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 22px 42px -24px rgba(0,0,0,0.55);">
+            <i class="{{ r.icon }}" style="font-size: 20px; color: var(--pg-accent);"></i>
+            <h3 style="margin: 0; font-weight: 500; font-size: 16px;">{{ r.name }}</h3>
+            <p style="margin: 0; font-size: 13px; line-height: 1.65; color: var(--pg-muted); text-wrap: pretty;">{{ r.blurb }}</p>
+            <span style="margin-top: auto; padding-top: 6px; font-size: 11.5px; color: var(--pg-faint);">{{ r.meta }}</span>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    <section id="flujo" style="max-width: 1080px; margin: 0 auto; padding: clamp(24px, 4vw, 40px); scroll-margin-top: 24px;">
+      <div style="display: flex; align-items: baseline; justify-content: space-between; gap: 22px; margin-bottom: 28px; flex-wrap: wrap;" data-reveal="1">
+        <h2 style="margin: 0; font-weight: 500; font-size: clamp(23px, 3.2vw, 30px); letter-spacing: -0.02em; max-width: 16em; text-wrap: balance;">Del cobro en pesos al USDC en el wallet</h2>
+        <button onClick="{{ runSim }}" style="{{ simBtnStyle }}"><i class="{{ simIcon }}" style="font-size: 15px;"></i>{{ simLabel }}</button>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px;">
+        <sc-for list="{{ steps }}" as="s" hint-placeholder-count="3">
+          <article data-reveal="1" style="{{ s.cardStyle }}" style-hover="border-color: var(--pg-accent); box-shadow: 0 1px 2px rgba(0,0,0,0.07), 0 22px 42px -24px rgba(0,0,0,0.55);">
+            <div style="display: flex; align-items: center; justify-content: space-between; gap: 10px;">
+              <span style="font-size: 12px; color: var(--pg-accent); letter-spacing: 0.14em;">{{ s.n }}</span>
+              <span style="{{ s.pillStyle }}">{{ s.pill }}</span>
+            </div>
+            <h3 style="margin: 0; font-weight: 500; font-size: 16px;">{{ s.title }}</h3>
+            <p style="margin: 0; font-size: 13px; line-height: 1.65; color: var(--pg-muted); text-wrap: pretty;">{{ s.body }}</p>
+            <code style="margin-top: auto; padding: 9px 11px; border-radius: 8px; background: var(--pg-code); border: 1px solid var(--pg-border); font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11.5px; color: var(--pg-accent-text); overflow-x: auto;">{{ s.code }}</code>
+          </article>
+        </sc-for>
+      </div>
+    </section>
+
+    
+
+    
+
+    <section id="contacto" style="max-width: 1080px; margin: 0 auto; padding: clamp(24px, 4vw, 40px) clamp(20px, 4vw, 40px) clamp(48px, 7vw, 72px); scroll-margin-top: 24px;">
+      <div data-reveal="1" style="padding: clamp(28px, 5vw, 44px) clamp(24px, 4vw, 40px); border-radius: 14px; background: var(--pg-band); color: #e9e9ed; box-shadow: 0 20px 50px -34px rgba(0,0,0,0.75); display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;">
+        <div style="display: flex; flex-direction: column; gap: 10px; max-width: 30em;"><h2 style="margin: 0; font-weight: 500; font-size: clamp(21px, 3vw, 26px); letter-spacing: -0.02em; text-wrap: balance;">Cuéntanos qué necesitas cobrar y en qué país</h2><p style="margin: 0; font-size: 13.5px; line-height: 1.7; color: #c4c4c8;">Te respondemos con los rails que te sirven, lo que hace falta para activarlos y una prueba en sandbox.</p></div>
+        <a href="mailto:hola@noapay.lat" style="display: inline-flex; align-items: center; gap: 6px; padding: 13px 22px; border-radius: 8px; border: 1px solid #a1a1aa; color: #f4f4f5; font-size: 14px; transition: background 180ms ease, transform 180ms ease;" style-hover="background: rgba(244,244,245,0.12); transform: translateY(-1px);">
+          <i class="ph ph-envelope-simple" style="font-size: 15px;"></i>hola@noapay.lat
+        </a>
+      </div>
+    </section>
+
+    <footer style="border-top: 1px solid var(--pg-border);">
+      <div style="max-width: 1080px; margin: 0 auto; padding: 22px clamp(20px, 4vw, 40px); display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap; font-size: 12px; color: var(--pg-faint);">
+        <span>NOAPAY · noa-pay · MIT</span>
+        <div style="display: flex; gap: 22px;">
+          <a href="#rails" style="color: var(--pg-faint);" style-hover="color: var(--pg-text);">Rails</a>
+          <a href="#precios" style="color: var(--pg-faint);" style-hover="color: var(--pg-text);">Precios</a>
+          <a href="#contacto" style="color: var(--pg-faint);" style-hover="color: var(--pg-text);">Contacto</a>
+        </div>
+      </div>
+    </footer>
+  </div>
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1200}}">
+const THEMES = {
+  dark: {
+    "--pg-bg": "#131315", "--pg-surface": "#1c1c1f", "--pg-border": "#33333a",
+    "--pg-text": "#ededee", "--pg-muted": "#9d9da5", "--pg-faint": "#75757d",
+    "--pg-accent": "#d4d4d8", "--pg-accent-text": "#f4f4f5", "--pg-accent-soft": "rgba(244,244,245,0.08)",
+    "--pg-code": "#171719", "--pg-band": "#232326"
+  },
+  light: {
+    "--pg-bg": "#f6f6f7", "--pg-surface": "#ffffff", "--pg-border": "#e3e3e6",
+    "--pg-text": "#18181b", "--pg-muted": "#5c5c63", "--pg-faint": "#8a8a92",
+    "--pg-accent": "#18181b", "--pg-accent-text": "#18181b", "--pg-accent-soft": "#f0f0f1",
+    "--pg-code": "#f4f4f5", "--pg-band": "#18181b"
+  }
+};
+
+class Component extends DCLogic {
+  state = { theme: "dark", openFaq: 0, simStep: 0, simRunning: false, copied: false };
+
+  componentDidMount() {
+    try {
+      const saved = localStorage.getItem("noapay-landing-theme");
+      if (saved === "light" || saved === "dark") this.setState({ theme: saved });
+    } catch (e) {}
+
+    this.trackNav();
+
+    if (typeof IntersectionObserver === "undefined") return;
+    if (window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    const nodes = Array.from(document.querySelectorAll("[data-reveal]"));
+    if (!nodes.length) return;
+    nodes.forEach((n) => {
+      n.style.opacity = "0";
+      n.style.transform = "translateY(16px)";
+      n.style.transition = "opacity 560ms cubic-bezier(0.22,0.61,0.36,1), transform 560ms cubic-bezier(0.22,0.61,0.36,1)";
+    });
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach((e, i) => {
+        if (!e.isIntersecting) return;
+        const el = e.target;
+        setTimeout(() => { el.style.opacity = "1"; el.style.transform = "none"; }, Math.min(i, 4) * 60);
+        io.unobserve(el);
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.08 });
+    nodes.forEach((n) => io.observe(n));
+    this._io = io;
+  }
+
+  trackNav() {
+    const links = Array.from(document.querySelectorAll("[data-navlink]"));
+    links.forEach((a) => {
+      a.addEventListener("click", (e) => {
+        const target = document.getElementById(a.getAttribute("data-navlink"));
+        if (!target) return;
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
+  componentWillUnmount() {
+    if (this._io) this._io.disconnect();
+    if (this._navIo) this._navIo.disconnect();
+    if (this._timers) this._timers.forEach(clearTimeout);
+  }
+
+  toggleTheme = () => {
+    const next = this.state.theme === "dark" ? "light" : "dark";
+    this.setState({ theme: next });
+    try { localStorage.setItem("noapay-landing-theme", next); } catch (e) {}
+  };
+
+  runSim = () => {
+    if (this.state.simRunning) return;
+    if (this._timers) this._timers.forEach(clearTimeout);
+    this._timers = [];
+    this.setState({ simRunning: true, simStep: 1 });
+    [2, 3].forEach((step, i) => {
+      this._timers.push(setTimeout(() => this.setState({ simStep: step, simRunning: step < 3 }), 900 * (i + 1)));
+    });
+  };
+
+  copyInstall = () => {
+    const done = () => {
+      this.setState({ copied: true });
+      setTimeout(() => this.setState({ copied: false }), 1800);
+    };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText("npm install noa-pay").then(done, done);
+    } else { done(); }
+  };
+
+  renderVals() {
+    const st = this.state;
+    const dark = st.theme === "dark";
+    const theme = THEMES[dark ? "dark" : "light"];
+
+    return {
+      themeVars: theme,
+      markSrc: dark ? "assets/mark-white.png" : "assets/mark-black.png",
+      toggleTheme: this.toggleTheme,
+      themeIcon: dark ? "ph ph-sun" : "ph ph-moon",
+      themeTitle: dark ? "Cambiar a claro" : "Cambiar a oscuro",
+      copyInstall: this.copyInstall,
+      copyIcon: st.copied ? "ph ph-check" : "ph ph-copy",
+
+      stats: [
+        { n: "7", label: "países con cobro fiat" },
+        { n: "6", label: "monedas contra USDC" },
+        { n: "5", label: "redes de destino" },
+        { n: "9", label: "servicios contratables" },
+        { n: "0", label: "SDK de proveedor instalado" }
+      ],
+
+      rails: [
+        { name: "Mercado Pago", icon: "ph ph-link-simple", blurb: "Links de Checkout Pro y cobros PIX, una cuenta por país y verificación de webhook incluida.", meta: "AR · BR · MX · CL · CO · PE · UY" },
+        { name: "Etherfuse", icon: "ph ph-arrows-left-right", blurb: "BRL·PIX y MXN·SPEI contra Solana, Stellar, Base, Polygon y Monad.", meta: "5 redes" },
+        { name: "Koywe", icon: "ph ph-swap", blurb: "ARS, CLP, MXN, COP, PEN y BRL contra USDC en Stellar, con KYC delegado.", meta: "6 monedas · Stellar" },
+        { name: "Anchors SEP", icon: "ph ph-anchor", blurb: "SEP-1, SEP-10 y SEP-24 contra cualquier anchor compatible.", meta: "Sin credenciales" }
+      ],
+
+      runSim: this.runSim,
+      simLabel: st.simStep === 0 ? "Simular una orden" : st.simStep >= 3 ? "Repetir" : "Corriendo",
+      simIcon: st.simStep >= 3 ? "ph ph-arrow-counter-clockwise" : "ph ph-play",
+      simBtnStyle: {
+        display: "inline-flex", alignItems: "center", gap: "6px", padding: "9px 16px",
+        borderRadius: "8px", background: "transparent", border: "1px solid var(--pg-accent)",
+        color: "var(--pg-accent-text)", fontFamily: "'Poppins', system-ui, sans-serif", fontSize: "12.5px",
+        cursor: st.simRunning ? "default" : "pointer", opacity: st.simRunning ? 0.6 : 1,
+        transition: "opacity 180ms ease"
+      },
+
+      steps: [
+        { n: "01", title: "Arma el cobro", body: "La tasa media de CoinGecko y tu spread quedan congelados al crear la orden.", code: "noa.ramp.onramp({ spread: 0.02 })" },
+        { n: "02", title: "Recibe el webhook", body: "El motor valida la firma, vuelve a consultar el pago y compara el monto pagado.", code: "noa.ramp.handleWebhook(...)" },
+        { n: "03", title: "Libera el activo", body: "Tu settlement mueve el USDC al wallet del usuario y la orden se cierra, una sola vez.", code: "noa.ramp.on('settlement:released')" }
+      ].map((s, i) => {
+        const done = st.simStep > i + 1;
+        const active = st.simStep === i + 1;
+        return {
+          n: s.n, title: s.title, body: s.body, code: s.code,
+          pill: done ? "Listo" : active ? "En curso" : "En espera",
+          pillStyle: {
+            padding: "3px 9px", borderRadius: "999px", fontSize: "10.5px",
+            background: done || active ? "var(--pg-accent-soft)" : "transparent",
+            border: "1px solid " + (done || active ? "var(--pg-accent)" : "var(--pg-border)"),
+            color: done || active ? "var(--pg-accent-text)" : "var(--pg-faint)",
+            transition: "background 240ms ease, color 240ms ease, border-color 240ms ease"
+          },
+          cardStyle: {
+            display: "flex", flexDirection: "column", gap: "10px", padding: "22px",
+            borderRadius: "14px", background: "var(--pg-surface)",
+            border: "1px solid " + (active ? "var(--pg-accent)" : "var(--pg-border)"),
+            boxShadow: active
+              ? "0 1px 2px rgba(0,0,0,0.07), 0 26px 48px -26px rgba(0,0,0,0.6)"
+              : "0 1px 2px rgba(0,0,0,0.06), 0 10px 24px -18px rgba(0,0,0,0.45)",
+            transform: active ? "translateY(-3px)" : "none",
+            transition: "transform 300ms ease, border-color 300ms ease, box-shadow 300ms ease"
+          }
+        };
+      }),
+
+      plans: [
+        { name: "Sandbox", tag: "Gratis", price: "$0", unit: "siempre", featured: false,
+          body: "La biblioteca completa contra cuentas de prueba, con el simulador local del flujo de liquidación.", cta: "Empezar gratis" },
+        { name: "Producción", tag: "Popular", price: "0,9%", unit: "por volumen liquidado", featured: true,
+          body: "Cuentas reales por país, liquidación automática y webhooks firmados hacia tus endpoints.", cta: "Solicitar acceso" },
+        { name: "Enterprise", tag: "A medida", price: "Hablemos", unit: "según volumen", featured: false,
+          body: "Proveedores propios, anchors SEP dedicados y acuerdos de nivel de servicio.", cta: "Hablar con el equipo" }
+      ].map((p) => ({
+        name: p.name, tag: p.tag, price: p.price, unit: p.unit, body: p.body, cta: p.cta,
+        cardStyle: {
+          display: "flex", flexDirection: "column", gap: "12px", padding: "26px", borderRadius: "14px",
+          background: "var(--pg-surface)",
+          border: "1px solid " + (p.featured ? "var(--pg-accent)" : "var(--pg-border)"),
+          boxShadow: p.featured
+            ? "0 1px 2px rgba(0,0,0,0.07), 0 28px 54px -28px rgba(0,0,0,0.35)"
+            : "0 1px 2px rgba(0,0,0,0.06), 0 12px 28px -20px rgba(0,0,0,0.45)",
+          transition: "transform 220ms ease, box-shadow 220ms ease"
+        },
+        tagStyle: {
+          padding: "3px 9px", borderRadius: "999px", fontSize: "10.5px",
+          background: p.featured ? "var(--pg-accent-soft)" : "transparent",
+          border: "1px solid " + (p.featured ? "var(--pg-accent)" : "var(--pg-border)"),
+          color: p.featured ? "var(--pg-accent-text)" : "var(--pg-faint)"
+        },
+        ctaStyle: {
+          marginTop: "auto", display: "inline-flex", alignItems: "center", justifyContent: "center",
+          padding: "11px 16px", borderRadius: "8px", fontSize: "13px",
+          border: "1px solid " + (p.featured ? "var(--pg-accent)" : "var(--pg-border)"),
+          color: p.featured ? "var(--pg-accent-text)" : "var(--pg-text)",
+          background: "transparent", transition: "background 180ms ease"
+        }
+      })),
+
+      faqs: [
+        { q: "¿Puedo probar PIX en sandbox?", a: "No. Mercado Pago solo concede el alcance de la API de pagos que PIX necesita a cuentas reales de producción, así que una cuenta de prueba devuelve 401. Para ejercitar el rail de BRL en sandbox se usa createPaymentLink." },
+        { q: "¿La biblioteca lee mi archivo .env?", a: "Nunca. Cada credencial y ajuste es un parámetro del constructor; de dónde sale ese valor lo decides tú." },
+        { q: "¿Quién custodia las llaves privadas?", a: "Tú. La biblioteca no toca llaves: tu función de settlement y tu firmante mueven los fondos." },
+        { q: "¿Qué pasa si el pago no coincide con la cotización?", a: "La orden no se liquida. El monto pagado debe coincidir con el cotizado dentro de la tolerancia que definas, y los webhooks duplicados son idempotentes." }
+      ].map((f, i) => ({
+        q: f.q, a: f.a,
+        icon: st.openFaq === i ? "ph ph-minus" : "ph ph-plus",
+        toggle: () => this.setState({ openFaq: st.openFaq === i ? -1 : i }),
+        panelStyle: {
+          display: "grid",
+          gridTemplateRows: st.openFaq === i ? "1fr" : "0fr",
+          opacity: st.openFaq === i ? 1 : 0,
+          transition: "grid-template-rows 320ms cubic-bezier(0.22,0.61,0.36,1), opacity 240ms ease",
+          overflow: "hidden"
+        }
+      }))
+    };
+  }
+}
+
+</script>
+</body>
+</html>

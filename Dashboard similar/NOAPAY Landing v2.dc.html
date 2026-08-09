@@ -76,7 +76,6 @@
           <sc-for list="{{ snippetTabs }}" as="t" hint-placeholder-count="4">
             <button onClick="{{ t.select }}" style="{{ t.style }}">{{ t.label }}</button>
           </sc-for>
-          <span style="margin-left: auto; font-size: 11.5px; color: #75798c; padding-right: 5.6px;">{{ snippetFile }}</span>
         </div>
         <sc-if value="{{ isMercadoPago }}" hint-placeholder-val="{{ true }}">
           <pre style="margin: 0; padding: 22.4px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12.5px; line-height: 1.85; color: #cfd3e5; overflow-x: auto;"><span style="color: #75798c;">import</span> { NoaClient, FiatCurrency } <span style="color: #75798c;">from</span> <span style="color: #b5abfc;">"noa-pay"</span>;
@@ -151,7 +150,7 @@ order.interactiveUrl; <span style="color: #595d6c;">// checkout / estado</span><
 });</pre>
         </sc-if>
       </div>
-    <div style="position: absolute; top: -253px; width: 620px; height: 620px; border-radius: 999px; background: radial-gradient(closest-side, rgba(145,132,217,0.22), rgba(145,132,217,0)); pointer-events: none; left: 853px"></div></div><div style="position: relative; max-width: 1160px; margin: 0 auto; padding: 0 44px 44px; display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 12.5px; color: var(--color-neutral-600); width: 1190px; height: 101px" data-reveal="1">
+    </div><div style="position: relative; max-width: 1160px; margin: 0 auto; padding: 0 44px 44px; display: flex; flex-wrap: wrap; align-items: center; gap: 28px; font-size: 12.5px; color: var(--color-neutral-600); width: 1190px; height: 101px" data-reveal="1">
       <span style="letter-spacing: 0.14em; text-transform: uppercase; font-size: 11px;">Rails conectados</span>
       <span style="color: var(--color-neutral-300);">Mercado Pago</span>
       <span style="color: var(--color-neutral-300);">PIX</span>
@@ -177,7 +176,20 @@ order.interactiveUrl; <span style="color: #595d6c;">// checkout / estado</span><
         </article>
       </sc-for>
     </div>
-  </section><section id="rails" style="max-width: 1160px; margin: 0 auto; padding: 44px;">
+  </section>
+
+  <section style="background: linear-gradient(90deg, #262a60 0%, #313877 50%, #262a60 100%); color: var(--color-text); margin-top: 44px;">
+    <div data-reveal="1" style="max-width: 1160px; margin: 0 auto; padding: 44px; display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 28px;">
+      <sc-for list="{{ stats }}" as="s" hint-placeholder-count="5">
+        <div style="display: flex; flex-direction: column; gap: 5.6px;">
+          <span style="font-family: var(--font-heading); font-size: 36px; line-height: 1; letter-spacing: -0.025em;">{{ s.n }}</span>
+          <span style="font-size: 12.5px; color: #c4c2e4; line-height: 1.45; text-wrap: pretty;">{{ s.label }}</span>
+        </div>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="rails" style="max-width: 1160px; margin: 0 auto; padding: 62px 44px 44px; scroll-margin-top: 24px;">
     <div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 22.4px; margin-bottom: 28px;" data-reveal="1">
       <div style="display: flex; flex-direction: column; gap: 8.4px;">
         <span style="font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; color: #75798c;">Rails</span>
@@ -493,6 +505,13 @@ class Component extends DCLogic {
     ];
 
     return {
+      stats: [
+        { n: "7", label: "países con cobro fiat" },
+        { n: "6", label: "monedas contra USDC" },
+        { n: "5", label: "redes de destino" },
+        { n: "9", label: "servicios contratables" },
+        { n: "0", label: "SDK de proveedor instalado" }
+      ],
       cases: [
         { icon: "ph ph-paper-plane-tilt", title: "Remesas y envíos", body: "El remitente paga en su moneda local por link o PIX; el receptor recibe USDC en su wallet en cuanto el pago se confirma.", meta: "Onramp · Mercado Pago + settlement" },
         { icon: "ph ph-storefront", title: "Checkout que liquida en stablecoin", body: "Cobras en pesos, reales o soles y tu tesorería queda en USDC, con la tasa y tu spread congelados al momento del cobro.", meta: "Onramp · CoinGecko + spread" },
@@ -540,6 +559,7 @@ class Component extends DCLogic {
         style: {
           padding: "5.6px 11.2px", borderRadius: "8px", border: 0, cursor: "pointer",
           fontFamily: "var(--font-body)", fontSize: "11.5px",
+          whiteSpace: "nowrap", flexShrink: 0,
           background: st.snippet === s.id ? "#2b2741" : "transparent",
           color: st.snippet === s.id ? "#d2cefd" : "#75798c",
           transition: "background 160ms ease, color 160ms ease"
